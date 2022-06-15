@@ -43,7 +43,7 @@ import './editor.less';
         'https://unpkg.com/vue-router/dist/vue-router.global.prod.js',
         'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
         'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
-        '/js/simulator.js',
+        '/lowcode-engine-demo/js/simulator.js',
       ],
     } as EngineOptions,
     preference
