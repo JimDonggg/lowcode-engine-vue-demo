@@ -1,33 +1,27 @@
 {
-  "packages": [
-    {
+  "packages": [{
       "package": "vue",
       "version": "3.2.33",
       "urls": ["https://unpkg.com/vue@3.2.37/dist/vue.runtime.global.js"],
       "library": "Vue"
     },
     {
-      "package": "@knx/kui",
-      "version": "1.0.2",
-      "urls": [
-        "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/kui/v1.1.0/kui.min.js"
-      ],
-      "library": "Kui"
+      "package": "naive-ui",
+      "version": "2.30.3",
+      "urls": ["https://unpkg.com/naive-ui@2.30.3/dist/index.js"],
+      "library": "naive"
     }
   ],
-  "components": [
-    {
+  "components": [{
       "title": "页面",
       "componentName": "Page",
-      "props": [
-        {
-          "name": "style",
-          "propType": "object",
-          "defaultValue": {
-            "padding": 12
-          }
+      "props": [{
+        "name": "style",
+        "propType": "object",
+        "defaultValue": {
+          "padding": 12
         }
-      ],
+      }],
       "configure": {
         "supports": {
           "style": true
@@ -51,15 +45,14 @@
     {
       "title": "头像",
       "category": "基础组件",
-      "componentName": "KAvatar",
+      "componentName": "NAvatar",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KAvatar",
+        "exportName": "NAvatar",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "src",
           "propType": "string"
         },
@@ -84,8 +77,7 @@
         }
       ],
       "configure": {
-        "props": [
-          {
+        "props": [{
             "name": "src",
             "title": "图片链接地址",
             "setter": "StringSetter"
@@ -111,14 +103,21 @@
             "setter": {
               "componentName": "MixedSetter",
               "props": {
-                "setters": [
-                  {
+                "setters": [{
                     "componentName": "RadioGroupSetter",
                     "props": {
-                      "options": [
-                        { "label": "small", "value": "small" },
-                        { "label": "medium", "value": "medium" },
-                        { "label": "large", "value": "large" }
+                      "options": [{
+                          "label": "small",
+                          "value": "small"
+                        },
+                        {
+                          "label": "medium",
+                          "value": "medium"
+                        },
+                        {
+                          "label": "large",
+                          "value": "large"
+                        }
                       ],
                       "defaultValue": "medium"
                     }
@@ -138,15 +137,14 @@
     {
       "title": "卡片",
       "category": "布局组件",
-      "componentName": "KCard",
+      "componentName": "NCard",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KCard",
+        "exportName": "NCard",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "title",
           "propType": "string"
         },
@@ -199,25 +197,34 @@
         "component": {
           "isContainer": true
         },
-        "props": [
-          {
+        "props": [{
             "type": "group",
             "title": "卡片样式",
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "size",
                 "title": "卡片尺寸",
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "label": "small", "value": "small" },
-                      { "label": "medium", "value": "medium" },
-                      { "label": "large", "value": "large" },
-                      { "label": "huge", "value": "huge" }
+                    "options": [{
+                        "label": "small",
+                        "value": "small"
+                      },
+                      {
+                        "label": "medium",
+                        "value": "medium"
+                      },
+                      {
+                        "label": "large",
+                        "value": "large"
+                      },
+                      {
+                        "label": "huge",
+                        "value": "huge"
+                      }
                     ],
                     "defaultValue": "medium"
                   }
@@ -246,8 +253,7 @@
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "segmented.content",
                 "title": "内容分割线",
                 "setter": {
@@ -279,8 +285,7 @@
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "title",
                 "title": "标题内容",
                 "setter": "StringSetter"
@@ -341,15 +346,14 @@
     {
       "title": "文本",
       "category": "基础组件",
-      "componentName": "KText",
+      "componentName": "NText",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KText",
+        "exportName": "NText",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "children",
           "propType": "string"
         },
@@ -386,8 +390,7 @@
         "supports": {
           "style": true
         },
-        "props": [
-          {
+        "props": [{
             "name": "children",
             "title": "文本内容",
             "setter": "StringSetter"
@@ -398,12 +401,26 @@
             "setter": {
               "componentName": "SelectSetter",
               "props": {
-                "options": [
-                  { "label": "default", "value": "default" },
-                  { "label": "success", "value": "success" },
-                  { "label": "info", "value": "info" },
-                  { "label": "warning", "value": "warning" },
-                  { "label": "error", "value": "error" }
+                "options": [{
+                    "label": "default",
+                    "value": "default"
+                  },
+                  {
+                    "label": "success",
+                    "value": "success"
+                  },
+                  {
+                    "label": "info",
+                    "value": "info"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  },
+                  {
+                    "label": "error",
+                    "value": "error"
+                  }
                 ]
               },
               "initialValue": "default"
@@ -440,10 +457,18 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "label": "1", "value": "1" },
-                  { "label": "2", "value": "2" },
-                  { "label": "3", "value": "3" }
+                "options": [{
+                    "label": "1",
+                    "value": "1"
+                  },
+                  {
+                    "label": "2",
+                    "value": "2"
+                  },
+                  {
+                    "label": "3",
+                    "value": "3"
+                  }
                 ]
               }
             }
@@ -454,10 +479,18 @@
             "setter": {
               "componentName": "SelectSetter",
               "props": {
-                "options": [
-                  { "label": "p", "value": "p" },
-                  { "label": "span", "value": "span" },
-                  { "label": "label", "value": "label" }
+                "options": [{
+                    "label": "p",
+                    "value": "p"
+                  },
+                  {
+                    "label": "span",
+                    "value": "span"
+                  },
+                  {
+                    "label": "label",
+                    "value": "label"
+                  }
                 ]
               },
               "initialValue": "span"
@@ -469,15 +502,14 @@
     {
       "title": "图标",
       "category": "基础组件",
-      "componentName": "KIcon",
+      "componentName": "NIcon",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KIcon",
+        "exportName": "NIcon",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "color",
           "propType": "string"
         },
@@ -573,8 +605,7 @@
         },
         "props": {
           "isExtends": true,
-          "override": [
-            {
+          "override": [{
               "name": "color",
               "title": "图标颜色",
               "setter": "ColorSetter"
@@ -596,15 +627,14 @@
     {
       "title": "间距",
       "category": "布局组件",
-      "componentName": "KSpace",
+      "componentName": "NSpace",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KSpace",
+        "exportName": "NSpace",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "align",
           "propType": "string"
         },
@@ -640,19 +670,32 @@
         "component": {
           "isContainer": true
         },
-        "props": [
-          {
+        "props": [{
             "name": "align",
             "title": "垂直排列方式",
             "setter": {
               "componentName": "SelectSetter",
               "props": {
-                "options": [
-                  { "title": "start", "value": "start" },
-                  { "title": "end", "value": "end" },
-                  { "title": "center", "value": "center" },
-                  { "title": "baseline", "value": "baseline" },
-                  { "title": "stretch", "value": "stretch" }
+                "options": [{
+                    "title": "start",
+                    "value": "start"
+                  },
+                  {
+                    "title": "end",
+                    "value": "end"
+                  },
+                  {
+                    "title": "center",
+                    "value": "center"
+                  },
+                  {
+                    "title": "baseline",
+                    "value": "baseline"
+                  },
+                  {
+                    "title": "stretch",
+                    "value": "stretch"
+                  }
                 ]
               }
             },
@@ -664,13 +707,30 @@
             "setter": {
               "componentName": "SelectSetter",
               "props": {
-                "options": [
-                  { "title": "start", "value": "start" },
-                  { "title": "end", "value": "end" },
-                  { "title": "center", "value": "center" },
-                  { "title": "space-around", "value": "space-around" },
-                  { "title": "space-between", "value": "space-between" },
-                  { "title": "space-evenly", "value": "space-evenly" }
+                "options": [{
+                    "title": "start",
+                    "value": "start"
+                  },
+                  {
+                    "title": "end",
+                    "value": "end"
+                  },
+                  {
+                    "title": "center",
+                    "value": "center"
+                  },
+                  {
+                    "title": "space-around",
+                    "value": "space-around"
+                  },
+                  {
+                    "title": "space-between",
+                    "value": "space-between"
+                  },
+                  {
+                    "title": "space-evenly",
+                    "value": "space-evenly"
+                  }
                 ]
               }
             },
@@ -685,14 +745,21 @@
             "setter": {
               "componentName": "MixedSetter",
               "props": {
-                "setters": [
-                  {
+                "setters": [{
                     "componentName": "RadioGroupSetter",
                     "props": {
-                      "options": [
-                        { "label": "small", "value": "small" },
-                        { "label": "medium", "value": "medium" },
-                        { "label": "large", "value": "large" }
+                      "options": [{
+                          "label": "small",
+                          "value": "small"
+                        },
+                        {
+                          "label": "medium",
+                          "value": "medium"
+                        },
+                        {
+                          "label": "large",
+                          "value": "large"
+                        }
                       ]
                     }
                   },
@@ -727,15 +794,14 @@
     },
     {
       "category": "基础组件",
-      "componentName": "KButton",
+      "componentName": "NButton",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KButton",
+        "exportName": "NButton",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "children",
           "propType": "string"
         },
@@ -809,90 +875,294 @@
         }
       ],
       "configure": {
-        "props": [
-          {
+        "props": [{
             "title": "按钮功能",
             "type": "group",
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "icon",
                 "title": "按钮图标",
                 "setter": {
                   "componentName": "SelectSetter",
                   "props": {
-                    "options": [
-                      { "title": "setting", "value": "setting" },
-                      { "title": "form", "value": "form" },
-                      { "title": "unlock", "value": "unlock" },
-                      { "title": "move", "value": "move" },
-                      { "title": "star", "value": "star" },
-                      { "title": "warning", "value": "warning" },
-                      { "title": "help", "value": "help" },
-                      { "title": "target-rect", "value": "target-rect" },
-                      { "title": "subtract-circle", "value": "subtract-circle" },
-                      { "title": "close-circle", "value": "close-circle" },
-                      { "title": "user", "value": "user" },
-                      { "title": "filter", "value": "filter" },
-                      { "title": "enlarge", "value": "enlarge" },
-                      { "title": "trophy", "value": "trophy" },
-                      { "title": "classification", "value": "classification" },
-                      { "title": "left", "value": "left" },
-                      { "title": "download", "value": "download" },
-                      { "title": "close", "value": "close" },
-                      { "title": "down", "value": "down" },
-                      { "title": "edit", "value": "edit" },
-                      { "title": "achievements", "value": "achievements" },
-                      { "title": "email", "value": "email" },
-                      { "title": "down-circle", "value": "down-circle" },
-                      { "title": "batch", "value": "batch" },
-                      { "title": "calendar", "value": "calendar" },
-                      { "title": "cry", "value": "cry" },
-                      { "title": "bell", "value": "bell" },
-                      { "title": "left-circle", "value": "left-circle" },
-                      { "title": "check", "value": "check" },
-                      { "title": "attachment", "value": "attachment" },
-                      { "title": "index", "value": "index" },
-                      { "title": "hotline", "value": "hotline" },
-                      { "title": "home", "value": "home" },
-                      { "title": "lock", "value": "lock" },
-                      { "title": "list", "value": "list" },
-                      { "title": "eye-close", "value": "eye-close" },
-                      { "title": "file-open", "value": "file-open" },
-                      { "title": "file-close", "value": "file-close" },
-                      { "title": "up", "value": "up" },
-                      { "title": "prompt", "value": "prompt" },
-                      { "title": "import", "value": "import" },
-                      { "title": "eye", "value": "eye" },
-                      { "title": "plus-circle", "value": "plus-circle" },
-                      { "title": "invisible", "value": "invisible" },
-                      { "title": "search", "value": "search" },
-                      { "title": "toggle-left", "value": "toggle-left" },
-                      { "title": "performance", "value": "performance" },
-                      { "title": "time", "value": "time" },
-                      { "title": "toggle-right", "value": "toggle-right" },
-                      { "title": "remove", "value": "remove" },
-                      { "title": "sorting", "value": "sorting" },
-                      { "title": "target", "value": "target" },
-                      { "title": "plus", "value": "plus" },
-                      { "title": "menu", "value": "menu" },
-                      { "title": "up-circle", "value": "up-circle" },
-                      { "title": "switch", "value": "switch" },
-                      { "title": "narrow", "value": "narrow" },
-                      { "title": "quote", "value": "quote" },
-                      { "title": "sucess", "value": "sucess" },
-                      { "title": "upload", "value": "upload" },
-                      { "title": "right", "value": "right" },
-                      { "title": "right-circle", "value": "right-circle" },
-                      { "title": "performance-setting", "value": "setting" },
-                      { "title": "rotate-left", "value": "rotate-left" },
-                      { "title": "smile", "value": "smile" },
-                      { "title": "rotate-right", "value": "rotate-right" },
-                      { "title": "refresh", "value": "refresh" },
-                      { "title": "fabulous", "value": "fabulous" },
-                      { "title": "message", "value": "message" }
+                    "options": [{
+                        "title": "setting",
+                        "value": "setting"
+                      },
+                      {
+                        "title": "form",
+                        "value": "form"
+                      },
+                      {
+                        "title": "unlock",
+                        "value": "unlock"
+                      },
+                      {
+                        "title": "move",
+                        "value": "move"
+                      },
+                      {
+                        "title": "star",
+                        "value": "star"
+                      },
+                      {
+                        "title": "warning",
+                        "value": "warning"
+                      },
+                      {
+                        "title": "help",
+                        "value": "help"
+                      },
+                      {
+                        "title": "target-rect",
+                        "value": "target-rect"
+                      },
+                      {
+                        "title": "subtract-circle",
+                        "value": "subtract-circle"
+                      },
+                      {
+                        "title": "close-circle",
+                        "value": "close-circle"
+                      },
+                      {
+                        "title": "user",
+                        "value": "user"
+                      },
+                      {
+                        "title": "filter",
+                        "value": "filter"
+                      },
+                      {
+                        "title": "enlarge",
+                        "value": "enlarge"
+                      },
+                      {
+                        "title": "trophy",
+                        "value": "trophy"
+                      },
+                      {
+                        "title": "classification",
+                        "value": "classification"
+                      },
+                      {
+                        "title": "left",
+                        "value": "left"
+                      },
+                      {
+                        "title": "download",
+                        "value": "download"
+                      },
+                      {
+                        "title": "close",
+                        "value": "close"
+                      },
+                      {
+                        "title": "down",
+                        "value": "down"
+                      },
+                      {
+                        "title": "edit",
+                        "value": "edit"
+                      },
+                      {
+                        "title": "achievements",
+                        "value": "achievements"
+                      },
+                      {
+                        "title": "email",
+                        "value": "email"
+                      },
+                      {
+                        "title": "down-circle",
+                        "value": "down-circle"
+                      },
+                      {
+                        "title": "batch",
+                        "value": "batch"
+                      },
+                      {
+                        "title": "calendar",
+                        "value": "calendar"
+                      },
+                      {
+                        "title": "cry",
+                        "value": "cry"
+                      },
+                      {
+                        "title": "bell",
+                        "value": "bell"
+                      },
+                      {
+                        "title": "left-circle",
+                        "value": "left-circle"
+                      },
+                      {
+                        "title": "check",
+                        "value": "check"
+                      },
+                      {
+                        "title": "attachment",
+                        "value": "attachment"
+                      },
+                      {
+                        "title": "index",
+                        "value": "index"
+                      },
+                      {
+                        "title": "hotline",
+                        "value": "hotline"
+                      },
+                      {
+                        "title": "home",
+                        "value": "home"
+                      },
+                      {
+                        "title": "lock",
+                        "value": "lock"
+                      },
+                      {
+                        "title": "list",
+                        "value": "list"
+                      },
+                      {
+                        "title": "eye-close",
+                        "value": "eye-close"
+                      },
+                      {
+                        "title": "file-open",
+                        "value": "file-open"
+                      },
+                      {
+                        "title": "file-close",
+                        "value": "file-close"
+                      },
+                      {
+                        "title": "up",
+                        "value": "up"
+                      },
+                      {
+                        "title": "prompt",
+                        "value": "prompt"
+                      },
+                      {
+                        "title": "import",
+                        "value": "import"
+                      },
+                      {
+                        "title": "eye",
+                        "value": "eye"
+                      },
+                      {
+                        "title": "plus-circle",
+                        "value": "plus-circle"
+                      },
+                      {
+                        "title": "invisible",
+                        "value": "invisible"
+                      },
+                      {
+                        "title": "search",
+                        "value": "search"
+                      },
+                      {
+                        "title": "toggle-left",
+                        "value": "toggle-left"
+                      },
+                      {
+                        "title": "performance",
+                        "value": "performance"
+                      },
+                      {
+                        "title": "time",
+                        "value": "time"
+                      },
+                      {
+                        "title": "toggle-right",
+                        "value": "toggle-right"
+                      },
+                      {
+                        "title": "remove",
+                        "value": "remove"
+                      },
+                      {
+                        "title": "sorting",
+                        "value": "sorting"
+                      },
+                      {
+                        "title": "target",
+                        "value": "target"
+                      },
+                      {
+                        "title": "plus",
+                        "value": "plus"
+                      },
+                      {
+                        "title": "menu",
+                        "value": "menu"
+                      },
+                      {
+                        "title": "up-circle",
+                        "value": "up-circle"
+                      },
+                      {
+                        "title": "switch",
+                        "value": "switch"
+                      },
+                      {
+                        "title": "narrow",
+                        "value": "narrow"
+                      },
+                      {
+                        "title": "quote",
+                        "value": "quote"
+                      },
+                      {
+                        "title": "sucess",
+                        "value": "sucess"
+                      },
+                      {
+                        "title": "upload",
+                        "value": "upload"
+                      },
+                      {
+                        "title": "right",
+                        "value": "right"
+                      },
+                      {
+                        "title": "right-circle",
+                        "value": "right-circle"
+                      },
+                      {
+                        "title": "performance-setting",
+                        "value": "setting"
+                      },
+                      {
+                        "title": "rotate-left",
+                        "value": "rotate-left"
+                      },
+                      {
+                        "title": "smile",
+                        "value": "smile"
+                      },
+                      {
+                        "title": "rotate-right",
+                        "value": "rotate-right"
+                      },
+                      {
+                        "title": "refresh",
+                        "value": "refresh"
+                      },
+                      {
+                        "title": "fabulous",
+                        "value": "fabulous"
+                      },
+                      {
+                        "title": "message",
+                        "value": "message"
+                      }
                     ]
                   }
                 }
@@ -903,9 +1173,14 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "title": "left", "value": "left" },
-                      { "title": "right", "value": "right" }
+                    "options": [{
+                        "title": "left",
+                        "value": "left"
+                      },
+                      {
+                        "title": "right",
+                        "value": "right"
+                      }
                     ]
                   }
                 },
@@ -935,10 +1210,18 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "title": "button", "value": "button" },
-                      { "title": "submit", "value": "submit" },
-                      { "title": "reset", "value": "reset" }
+                    "options": [{
+                        "title": "button",
+                        "value": "button"
+                      },
+                      {
+                        "title": "submit",
+                        "value": "submit"
+                      },
+                      {
+                        "title": "reset",
+                        "value": "reset"
+                      }
                     ]
                   }
                 },
@@ -952,21 +1235,40 @@
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "type",
                 "title": "按钮的类型",
                 "setter": {
                   "componentName": "SelectSetter",
                   "props": {
-                    "options": [
-                      { "title": "default", "value": "default" },
-                      { "title": "primary", "value": "primary" },
-                      { "title": "tertiary", "value": "tertiary" },
-                      { "title": "success", "value": "success" },
-                      { "title": "info", "value": "info" },
-                      { "title": "warning", "value": "warning" },
-                      { "title": "error", "value": "error" }
+                    "options": [{
+                        "title": "default",
+                        "value": "default"
+                      },
+                      {
+                        "title": "primary",
+                        "value": "primary"
+                      },
+                      {
+                        "title": "tertiary",
+                        "value": "tertiary"
+                      },
+                      {
+                        "title": "success",
+                        "value": "success"
+                      },
+                      {
+                        "title": "info",
+                        "value": "info"
+                      },
+                      {
+                        "title": "warning",
+                        "value": "warning"
+                      },
+                      {
+                        "title": "error",
+                        "value": "error"
+                      }
                     ]
                   }
                 },
@@ -988,11 +1290,22 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "label": "tiny", "value": "tiny" },
-                      { "label": "small", "value": "small" },
-                      { "label": "medium", "value": "medium" },
-                      { "label": "large", "value": "large" }
+                    "options": [{
+                        "label": "tiny",
+                        "value": "tiny"
+                      },
+                      {
+                        "label": "small",
+                        "value": "small"
+                      },
+                      {
+                        "label": "medium",
+                        "value": "medium"
+                      },
+                      {
+                        "label": "large",
+                        "value": "large"
+                      }
                     ]
                   }
                 },
@@ -1057,15 +1370,14 @@
     {
       "category": "数据录入",
       "title": "表单",
-      "componentName": "KForm",
+      "componentName": "NForm",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KForm",
+        "exportName": "NForm",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "disabled",
           "propType": "bool"
         },
@@ -1130,8 +1442,7 @@
         "component": {
           "isContainer": true
         },
-        "props": [
-          {
+        "props": [{
             "name": "model",
             "title": "表项值对象",
             "setter": "ExpressionSetter"
@@ -1176,9 +1487,14 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "left", "value": "left" },
-                  { "title": "right", "value": "right" }
+                "options": [{
+                    "title": "left",
+                    "value": "left"
+                  },
+                  {
+                    "title": "right",
+                    "value": "right"
+                  }
                 ]
               }
             },
@@ -1190,9 +1506,14 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "left", "value": "left" },
-                  { "title": "top", "value": "top" }
+                "options": [{
+                    "title": "left",
+                    "value": "left"
+                  },
+                  {
+                    "title": "top",
+                    "value": "top"
+                  }
                 ]
               }
             },
@@ -1219,10 +1540,18 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "left", "value": "left" },
-                  { "title": "right", "value": "right" },
-                  { "title": "right-hanging", "value": "right-hanging" }
+                "options": [{
+                    "title": "left",
+                    "value": "left"
+                  },
+                  {
+                    "title": "right",
+                    "value": "right"
+                  },
+                  {
+                    "title": "right-hanging",
+                    "value": "right-hanging"
+                  }
                 ]
               }
             },
@@ -1234,15 +1563,14 @@
     {
       "title": "表单项",
       "category": "数据录入",
-      "componentName": "KFormItem",
+      "componentName": "NFormItem",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KFormItem",
+        "exportName": "NFormItem",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "feedback",
           "propType": "string"
         },
@@ -1317,8 +1645,7 @@
           "loop": true,
           "style": true
         },
-        "props": [
-          {
+        "props": [{
             "name": "path",
             "title": "值路径",
             "setter": "StringSetter"
@@ -1329,10 +1656,18 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "small", "value": "small" },
-                  { "title": "medium", "value": "medium" },
-                  { "title": "large", "value": "large" }
+                "options": [{
+                    "title": "small",
+                    "value": "small"
+                  },
+                  {
+                    "title": "medium",
+                    "value": "medium"
+                  },
+                  {
+                    "title": "large",
+                    "value": "large"
+                  }
                 ]
               }
             },
@@ -1344,8 +1679,7 @@
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "label",
                 "title": "标签内容",
                 "setter": "StringSetter"
@@ -1362,9 +1696,14 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "title": "left", "value": "left" },
-                      { "title": "right", "value": "right" }
+                    "options": [{
+                        "title": "left",
+                        "value": "left"
+                      },
+                      {
+                        "title": "right",
+                        "value": "right"
+                      }
                     ]
                   }
                 },
@@ -1390,9 +1729,14 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "title": "left", "value": "left" },
-                      { "title": "top", "value": "top" }
+                    "options": [{
+                        "title": "left",
+                        "value": "left"
+                      },
+                      {
+                        "title": "top",
+                        "value": "top"
+                      }
                     ]
                   }
                 },
@@ -1419,10 +1763,18 @@
                 "setter": {
                   "componentName": "RadioGroupSetter",
                   "props": {
-                    "options": [
-                      { "title": "left", "value": "left" },
-                      { "title": "right", "value": "right" },
-                      { "title": "right-hanging", "value": "right-hanging" }
+                    "options": [{
+                        "title": "left",
+                        "value": "left"
+                      },
+                      {
+                        "title": "right",
+                        "value": "right"
+                      },
+                      {
+                        "title": "right-hanging",
+                        "value": "right-hanging"
+                      }
                     ]
                   }
                 },
@@ -1436,8 +1788,7 @@
             "extraProps": {
               "display": "block"
             },
-            "items": [
-              {
+            "items": [{
                 "name": "rule",
                 "title": "校验规则",
                 "setter": {
@@ -1471,14 +1822,21 @@
                 "setter": {
                   "componentName": "MixedSetter",
                   "props": {
-                    "setters": [
-                      {
+                    "setters": [{
                         "componentName": "RadioGroupSetter",
                         "props": {
-                          "options": [
-                            { "title": "error", "value": "error" },
-                            { "title": "success", "value": "success" },
-                            { "title": "warning", "value": "warning" }
+                          "options": [{
+                              "title": "error",
+                              "value": "error"
+                            },
+                            {
+                              "title": "success",
+                              "value": "success"
+                            },
+                            {
+                              "title": "warning",
+                              "value": "warning"
+                            }
                           ]
                         }
                       },
@@ -1496,15 +1854,14 @@
     {
       "category": "数据录入",
       "title": "文本输入",
-      "componentName": "KInput",
+      "componentName": "NInput",
       "npm": {
-        "package": "@knx/kui",
+        "package": "naive-ui",
         "version": "1.0.2",
-        "exportName": "KInput",
+        "exportName": "NInput",
         "destructuring": true
       },
-      "props": [
-        {
+      "props": [{
           "name": "autofocus",
           "propType": "bool"
         },
@@ -1551,8 +1908,7 @@
         }
       ],
       "configure": {
-        "props": [
-          {
+        "props": [{
             "name": "placeholder",
             "title": "输入占位符",
             "setter": "StringSetter"
@@ -1568,10 +1924,18 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "text", "value": "text" },
-                  { "title": "password", "value": "password" },
-                  { "title": "textarea", "value": "textarea" }
+                "options": [{
+                    "title": "text",
+                    "value": "text"
+                  },
+                  {
+                    "title": "password",
+                    "value": "password"
+                  },
+                  {
+                    "title": "textarea",
+                    "value": "textarea"
+                  }
                 ]
               }
             }
@@ -1602,9 +1966,14 @@
             "setter": {
               "componentName": "RadioGroupSetter",
               "props": {
-                "options": [
-                  { "title": "click", "value": "click" },
-                  { "title": "mousedown", "value": "mousedown" }
+                "options": [{
+                    "title": "click",
+                    "value": "click"
+                  },
+                  {
+                    "title": "mousedown",
+                    "value": "mousedown"
+                  }
                 ]
               }
             },
@@ -1631,184 +2000,157 @@
       }
     }
   ],
-  "componentList": [
-    {
+  "componentList": [{
       "title": "基础组件",
-      "children": [
-        {
+      "children": [{
           "title": "文本",
-          "library": "@knx/kui",
-          "snippets": [
-            {
-              "title": "文本",
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
-              "schema": {
-                "componentName": "KText",
-                "props": {
-                  "children": "文本内容"
-                }
+          "library": "naive-ui",
+          "snippets": [{
+            "title": "文本",
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
+            "schema": {
+              "componentName": "NText",
+              "props": {
+                "children": "文本内容"
               }
             }
-          ]
+          }]
         },
         {
-          "componentName": "KAvatar",
-          "library": "@knx/kui",
+          "componentName": "NAvatar",
+          "library": "naive-ui",
           "title": "头像",
-          "snippets": [
-            {
-              "title": "头像",
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
-              "schema": {
-                "componentName": "KAvatar",
-                "props": {
-                  "circle": true,
-                  "round": false,
-                  "src": "https://v2.vuejs.org/images/logo.svg",
-                  "size": "medium"
-                }
+          "snippets": [{
+            "title": "头像",
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
+            "schema": {
+              "componentName": "NAvatar",
+              "props": {
+                "circle": true,
+                "round": false,
+                "src": "https://v2.vuejs.org/images/logo.svg",
+                "size": "medium"
               }
             }
-          ]
+          }]
         },
         {
-          "componentName": "KIcon",
-          "library": "@knx/kui",
+          "componentName": "NIcon",
+          "library": "naive-ui",
           "title": "图标",
-          "snippets": [
-            {
-              "title": "图标",
-              "schema": {
-                "componentName": "KIcon",
-                "props": {
-                  "name": "fabulous"
-                }
+          "snippets": [{
+            "title": "图标",
+            "schema": {
+              "componentName": "NIcon",
+              "props": {
+                "name": "fabulous"
               }
             }
-          ]
+          }]
         },
         {
-          "componentName": "KButton",
-          "library": "@knx/kui",
+          "componentName": "NButton",
+          "library": "naive-ui",
           "title": "按钮",
-          "snippets": [
-            {
-              "title": "按钮",
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
-              "schema": {
-                "componentName": "KButton",
-                "props": {
-                  "children": "按钮"
-                }
+          "snippets": [{
+            "title": "按钮",
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
+            "schema": {
+              "componentName": "NButton",
+              "props": {
+                "children": "按钮"
               }
             }
-          ]
+          }]
         }
       ]
     },
     {
       "title": "布局组件",
-      "children": [
-        {
-          "componentName": "KCard",
-          "library": "@knx/kui",
-          "snippets": [
-            {
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
-              "title": "卡片",
-              "schema": {
-                "componentName": "KCard",
-                "children": []
-              }
+      "children": [{
+          "componentName": "NCard",
+          "library": "naive-ui",
+          "snippets": [{
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
+            "title": "卡片",
+            "schema": {
+              "componentName": "NCard",
+              "children": []
             }
-          ]
+          }]
         },
         {
-          "componentName": "KSpace",
-          "library": "@knx/kui",
-          "snippets": [
-            {
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/space.svg",
-              "title": "间距",
-              "schema": {
-                "componentName": "KSpace",
-                "children": []
-              }
+          "componentName": "NSpace",
+          "library": "naive-ui",
+          "snippets": [{
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/space.svg",
+            "title": "间距",
+            "schema": {
+              "componentName": "NSpace",
+              "children": []
             }
-          ]
+          }]
         }
       ]
     },
     {
       "title": "信息输入",
-      "children": [
-        {
-          "componentName": "KForm",
-          "library": "@knx/kui",
-          "snippets": [
-            {
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png",
-              "title": "表单容器",
-              "schema": {
-                "componentName": "KForm",
-                "props": {
-                  "label-width": 80
-                },
-                "children": [
-                  {
-                    "componentName": "KFormItem",
-                    "props": {
-                      "label": "用户名"
-                    },
-                    "children": [
-                      {
-                        "componentName": "KInput",
-                        "props": {
-                          "placeholder": "请输入用户名"
-                        }
-                      }
-                    ]
+      "children": [{
+          "componentName": "NForm",
+          "library": "naive-ui",
+          "snippets": [{
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png",
+            "title": "表单容器",
+            "schema": {
+              "componentName": "NForm",
+              "props": {
+                "label-width": 80
+              },
+              "children": [{
+                  "componentName": "NFormItem",
+                  "props": {
+                    "label": "用户名"
                   },
-                  {
-                    "componentName": "KFormItem",
+                  "children": [{
+                    "componentName": "NInput",
                     "props": {
-                      "label": "密码"
-                    },
-                    "children": [
-                      {
-                        "componentName": "KInput",
-                        "props": {
-                          "type": "password",
-                          "placeholder": "请输入密码"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
+                      "placeholder": "请输入用户名"
+                    }
+                  }]
+                },
+                {
+                  "componentName": "NFormItem",
+                  "props": {
+                    "label": "密码"
+                  },
+                  "children": [{
+                    "componentName": "NInput",
+                    "props": {
+                      "type": "password",
+                      "placeholder": "请输入密码"
+                    }
+                  }]
+                }
+              ]
             }
-          ]
+          }]
         },
         {
-          "componentName": "KFormItem",
-          "library": "@knx/kui",
-          "snippets": [
-            {
-              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/input.png",
-              "title": "文本输入",
-              "schema": {
-                "componentName": "KFormItem",
-                "props": {
-                  "label": "标签"
-                },
-                "children": [
-                  {
-                    "componentName": "KInput"
-                  }
-                ]
-              }
+          "componentName": "NFormItem",
+          "library": "naive-ui",
+          "snippets": [{
+            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/input.png",
+            "title": "文本输入",
+            "schema": {
+              "componentName": "NFormItem",
+              "props": {
+                "label": "标签"
+              },
+              "children": [{
+                "componentName": "NInput"
+              }]
             }
-          ]
+          }]
         }
       ]
     }

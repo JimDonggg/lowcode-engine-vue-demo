@@ -1,5 +1,4 @@
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
-import { message } from '@knx/kui';
 import { buildComponents } from '@knxcloud/lowcode-utils';
 import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
 import { NSpin } from 'naive-ui';
@@ -51,5 +50,4 @@ const Preview = defineComponent(() => {
 });
 
 const app = createApp(Preview);
-app.config.globalProperties.$message = message;
 app.mount('#lce-container');
