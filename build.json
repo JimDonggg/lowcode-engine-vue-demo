@@ -12,7 +12,7 @@
     "@alilc/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
     "@knxcloud/lowcode-vue-renderer": "var window.LCVueRenderer",
     "@knxcloud/lowcode-vue-simulator-renderer": "var window.LCVueSimulatorRenderer",
-    "naive-ui": "var window.naive",
+    "element-plus": "var window.ElementPlus",
     "lodash": "var window._",
     "moment": "var window.moment",
     "prop-types": "var window.PropTypes",

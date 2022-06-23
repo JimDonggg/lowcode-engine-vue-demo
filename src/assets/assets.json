@@ -6,10 +6,10 @@
       "library": "Vue"
     },
     {
-      "package": "naive-ui",
-      "version": "2.30.3",
-      "urls": ["https://unpkg.com/naive-ui@2.30.3/dist/index.js"],
-      "library": "naive"
+      "package": "element-plus",
+      "version": "2.2.6",
+      "urls": ["//unpkg.com/element-plus", "//unpkg.com/element-plus/dist/index.css"],
+      "library": "ElementPlus"
     }
   ],
   "components": [{
@@ -45,11 +45,11 @@
     {
       "title": "头像",
       "category": "基础组件",
-      "componentName": "NAvatar",
+      "componentName": "ElAvatar",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NAvatar",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElAvatar",
         "destructuring": true
       },
       "props": [{
@@ -137,11 +137,11 @@
     {
       "title": "卡片",
       "category": "布局组件",
-      "componentName": "NCard",
+      "componentName": "ElCard",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NCard",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElCard",
         "destructuring": true
       },
       "props": [{
@@ -346,11 +346,11 @@
     {
       "title": "文本",
       "category": "基础组件",
-      "componentName": "NText",
+      "componentName": "ElText",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NText",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElText",
         "destructuring": true
       },
       "props": [{
@@ -502,11 +502,11 @@
     {
       "title": "图标",
       "category": "基础组件",
-      "componentName": "NIcon",
+      "componentName": "ElIcon",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NIcon",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElIcon",
         "destructuring": true
       },
       "props": [{
@@ -627,11 +627,11 @@
     {
       "title": "间距",
       "category": "布局组件",
-      "componentName": "NSpace",
+      "componentName": "ElSpace",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NSpace",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElSpace",
         "destructuring": true
       },
       "props": [{
@@ -794,11 +794,11 @@
     },
     {
       "category": "基础组件",
-      "componentName": "NButton",
+      "componentName": "ElButton",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NButton",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElButton",
         "destructuring": true
       },
       "props": [{
@@ -1370,11 +1370,11 @@
     {
       "category": "数据录入",
       "title": "表单",
-      "componentName": "NForm",
+      "componentName": "ElForm",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NForm",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElForm",
         "destructuring": true
       },
       "props": [{
@@ -1563,11 +1563,11 @@
     {
       "title": "表单项",
       "category": "数据录入",
-      "componentName": "NFormItem",
+      "componentName": "ElFormItem",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NFormItem",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElFormItem",
         "destructuring": true
       },
       "props": [{
@@ -1854,11 +1854,11 @@
     {
       "category": "数据录入",
       "title": "文本输入",
-      "componentName": "NInput",
+      "componentName": "ElInput",
       "npm": {
-        "package": "naive-ui",
-        "version": "1.0.2",
-        "exportName": "NInput",
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElInput",
         "destructuring": true
       },
       "props": [{
@@ -2004,12 +2004,12 @@
       "title": "基础组件",
       "children": [{
           "title": "文本",
-          "library": "naive-ui",
+          "library": "ElementPlus",
           "snippets": [{
             "title": "文本",
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
             "schema": {
-              "componentName": "NText",
+              "componentName": "ElText",
               "props": {
                 "children": "文本内容"
               }
@@ -2017,14 +2017,14 @@
           }]
         },
         {
-          "componentName": "NAvatar",
-          "library": "naive-ui",
+          "componentName": "ElAvatar",
+          "library": "ElementPlus",
           "title": "头像",
           "snippets": [{
             "title": "头像",
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
             "schema": {
-              "componentName": "NAvatar",
+              "componentName": "ElAvatar",
               "props": {
                 "circle": true,
                 "round": false,
@@ -2035,13 +2035,13 @@
           }]
         },
         {
-          "componentName": "NIcon",
-          "library": "naive-ui",
+          "componentName": "ElIcon",
+          "library": "ElementPlus",
           "title": "图标",
           "snippets": [{
             "title": "图标",
             "schema": {
-              "componentName": "NIcon",
+              "componentName": "ElIcon",
               "props": {
                 "name": "fabulous"
               }
@@ -2049,14 +2049,14 @@
           }]
         },
         {
-          "componentName": "NButton",
-          "library": "naive-ui",
+          "componentName": "ElButton",
+          "library": "ElementPlus",
           "title": "按钮",
           "snippets": [{
             "title": "按钮",
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
             "schema": {
-              "componentName": "NButton",
+              "componentName": "ElButton",
               "props": {
                 "children": "按钮"
               }
@@ -2068,25 +2068,25 @@
     {
       "title": "布局组件",
       "children": [{
-          "componentName": "NCard",
-          "library": "naive-ui",
+          "componentName": "ElCard",
+          "library": "ElementPlus",
           "snippets": [{
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
             "title": "卡片",
             "schema": {
-              "componentName": "NCard",
+              "componentName": "ElCard",
               "children": []
             }
           }]
         },
         {
-          "componentName": "NSpace",
-          "library": "naive-ui",
+          "componentName": "ElSpace",
+          "library": "ElementPlus",
           "snippets": [{
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/space.svg",
             "title": "间距",
             "schema": {
-              "componentName": "NSpace",
+              "componentName": "ElSpace",
               "children": []
             }
           }]
@@ -2096,35 +2096,35 @@
     {
       "title": "信息输入",
       "children": [{
-          "componentName": "NForm",
-          "library": "naive-ui",
+          "componentName": "ElForm",
+          "library": "ElementPlus",
           "snippets": [{
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png",
             "title": "表单容器",
             "schema": {
-              "componentName": "NForm",
+              "componentName": "ElForm",
               "props": {
                 "label-width": 80
               },
               "children": [{
-                  "componentName": "NFormItem",
+                  "componentName": "ElFormItem",
                   "props": {
                     "label": "用户名"
                   },
                   "children": [{
-                    "componentName": "NInput",
+                    "componentName": "ElInput",
                     "props": {
                       "placeholder": "请输入用户名"
                     }
                   }]
                 },
                 {
-                  "componentName": "NFormItem",
+                  "componentName": "ElFormItem",
                   "props": {
                     "label": "密码"
                   },
                   "children": [{
-                    "componentName": "NInput",
+                    "componentName": "ElInput",
                     "props": {
                       "type": "password",
                       "placeholder": "请输入密码"
@@ -2136,18 +2136,18 @@
           }]
         },
         {
-          "componentName": "NFormItem",
-          "library": "naive-ui",
+          "componentName": "ElFormItem",
+          "library": "ElementPlus",
           "snippets": [{
             "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/input.png",
             "title": "文本输入",
             "schema": {
-              "componentName": "NFormItem",
+              "componentName": "ElFormItem",
               "props": {
                 "label": "标签"
               },
               "children": [{
-                "componentName": "NInput"
+                "componentName": "ElInput"
               }]
             }
           }]

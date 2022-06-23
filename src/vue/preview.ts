@@ -1,7 +1,6 @@
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
 import { buildComponents } from '@knxcloud/lowcode-utils';
 import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
-import { NSpin } from 'naive-ui';
 import { defineComponent, onMounted, reactive, h, createApp } from 'vue';
 import { ConfigProvider } from './config-provider';
 
@@ -35,10 +34,6 @@ const Preview = defineComponent(() => {
 
   return () => {
     const { schema, components } = data;
-    if (!schema || !components) {
-      return h(NSpin);
-    }
-
     return h('div', { class: 'lowcode-plugin-sample-preview' }, [
       h(VueRenderer, {
         class: 'lowcode-plugin-sample-preview-content',
