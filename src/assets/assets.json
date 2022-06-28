@@ -119,7 +119,7 @@
                           "value": "large"
                         }
                       ],
-                      "defaultValue": "medium"
+                      "defaultValue": "default"
                     }
                   },
                   "NumberSetter"
@@ -226,7 +226,7 @@
                         "value": "huge"
                       }
                     ],
-                    "defaultValue": "medium"
+                    "defaultValue": "default"
                   }
                 }
               },
@@ -339,162 +339,6 @@
                 }
               }
             ]
-          }
-        ]
-      }
-    },
-    {
-      "title": "文本",
-      "category": "基础组件",
-      "componentName": "ElText",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElText",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "children",
-          "propType": "string"
-        },
-        {
-          "name": "type",
-          "propType": "string"
-        },
-        {
-          "name": "strong",
-          "propType": "bool"
-        },
-        {
-          "name": "italic",
-          "propType": "bool"
-        },
-        {
-          "name": "underline",
-          "propType": "bool"
-        },
-        {
-          "name": "delete",
-          "propType": "bool"
-        },
-        {
-          "name": "code",
-          "propType": "bool"
-        },
-        {
-          "name": "depth",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "supports": {
-          "style": true
-        },
-        "props": [{
-            "name": "children",
-            "title": "文本内容",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "type",
-            "title": "排印类型",
-            "setter": {
-              "componentName": "SelectSetter",
-              "props": {
-                "options": [{
-                    "label": "default",
-                    "value": "default"
-                  },
-                  {
-                    "label": "success",
-                    "value": "success"
-                  },
-                  {
-                    "label": "info",
-                    "value": "info"
-                  },
-                  {
-                    "label": "warning",
-                    "value": "warning"
-                  },
-                  {
-                    "label": "error",
-                    "value": "error"
-                  }
-                ]
-              },
-              "initialValue": "default"
-            }
-          },
-          {
-            "name": "strong",
-            "title": "加粗",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "italic",
-            "title": "斜体",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "underline",
-            "title": "下划线",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "delete",
-            "title": "删除线",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "code",
-            "title": "代码模式",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "depth",
-            "title": "文字深度",
-            "setter": {
-              "componentName": "RadioGroupSetter",
-              "props": {
-                "options": [{
-                    "label": "1",
-                    "value": "1"
-                  },
-                  {
-                    "label": "2",
-                    "value": "2"
-                  },
-                  {
-                    "label": "3",
-                    "value": "3"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "name": "tag",
-            "title": "DOM 标签",
-            "setter": {
-              "componentName": "SelectSetter",
-              "props": {
-                "options": [{
-                    "label": "p",
-                    "value": "p"
-                  },
-                  {
-                    "label": "span",
-                    "value": "span"
-                  },
-                  {
-                    "label": "label",
-                    "value": "label"
-                  }
-                ]
-              },
-              "initialValue": "span"
-            }
           }
         ]
       }
@@ -767,7 +611,7 @@
                 ]
               }
             },
-            "defaultValue": "medium"
+            "defaultValue": "default"
           },
           {
             "name": "inline",
@@ -1309,7 +1153,7 @@
                     ]
                   }
                 },
-                "defaultValue": "medium"
+                "defaultValue": "default"
               },
               {
                 "name": "bordered",
@@ -1671,7 +1515,7 @@
                 ]
               }
             },
-            "defaultValue": "medium"
+            "defaultValue": "default"
           },
           {
             "type": "group",
@@ -1896,10 +1740,6 @@
           "propType": "string"
         },
         {
-          "name": "value",
-          "propType": "string"
-        },
-        {
           "name": "show-password-on",
           "propType": {
             "type": "oneOf",
@@ -1914,7 +1754,7 @@
             "setter": "StringSetter"
           },
           {
-            "name": "v-model:value",
+            "name": "v-model",
             "title": "输入值",
             "setter": "ExpressionSetter"
           },
@@ -2003,20 +1843,6 @@
   "componentList": [{
       "title": "基础组件",
       "children": [{
-          "title": "文本",
-          "library": "ElementPlus",
-          "snippets": [{
-            "title": "文本",
-            "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
-            "schema": {
-              "componentName": "ElText",
-              "props": {
-                "children": "文本内容"
-              }
-            }
-          }]
-        },
-        {
           "componentName": "ElAvatar",
           "library": "ElementPlus",
           "title": "头像",
@@ -2028,8 +1854,7 @@
               "props": {
                 "circle": true,
                 "round": false,
-                "src": "https://v2.vuejs.org/images/logo.svg",
-                "size": "medium"
+                "src": "https://v2.vuejs.org/images/logo.svg"
               }
             }
           }]

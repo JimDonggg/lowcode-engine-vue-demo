@@ -34,13 +34,15 @@ const Preview = defineComponent(() => {
 
   return () => {
     const { schema, components } = data;
-    return h('div', { class: 'lowcode-plugin-sample-preview' }, [
-      h(VueRenderer, {
-        class: 'lowcode-plugin-sample-preview-content',
-        schema,
-        components,
-      }),
-    ]);
+    if (schema) {
+      return h('div', { class: 'lowcode-plugin-sample-preview' }, [
+        h(VueRenderer, {
+          class: 'lowcode-plugin-sample-preview-content',
+          schema,
+          components,
+        }),
+      ]);
+    }
   };
 });
 
