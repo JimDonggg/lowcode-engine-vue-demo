@@ -19,663 +19,6 @@
     }
   ],
   "components": [{
-      "category": "反馈",
-      "componentName": "ElAffix",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElAffix",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "zIndex",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "number",
-              "string"
-            ]
-          }
-        },
-        {
-          "name": "target",
-          "propType": "string"
-        },
-        {
-          "name": "offset",
-          "propType": "number"
-        },
-        {
-          "name": "position",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "zIndex",
-            "title": "zIndex",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "target",
-            "title": "target",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "offset",
-            "title": "offset",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "position",
-            "title": "position",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onScroll",
-            "onChange"
-          ]
-        }
-      },
-      "keywords": "ElAffix"
-    },
-    {
-      "category": "反馈",
-      "componentName": "ElAlert",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElAlert",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "title",
-          "propType": "string"
-        },
-        {
-          "name": "description",
-          "propType": "string"
-        },
-        {
-          "name": "type",
-          "propType": "string"
-        },
-        {
-          "name": "closable",
-          "propType": "bool"
-        },
-        {
-          "name": "closeText",
-          "propType": "string"
-        },
-        {
-          "name": "showIcon",
-          "propType": "bool"
-        },
-        {
-          "name": "center",
-          "propType": "bool"
-        },
-        {
-          "name": "effect",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "title",
-            "title": "title",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "description",
-            "title": "description",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "type",
-            "title": "类型",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "closable",
-            "title": "closable",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "closeText",
-            "title": "closeText",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "showIcon",
-            "title": "showIcon",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "center",
-            "title": "center",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "effect",
-            "title": "effect",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onClose"
-          ]
-        }
-      },
-      "keywords": "ElAlert"
-    },
-    {
-      "category": "表单",
-      "componentName": "ElAutocomplete",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElAutocomplete",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "valueKey",
-          "propType": "string"
-        },
-        {
-          "name": "modelValue",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "number"
-            ]
-          }
-        },
-        {
-          "name": "debounce",
-          "propType": "number"
-        },
-        {
-          "name": "placement",
-          "propType": "string"
-        },
-        {
-          "name": "fetchSuggestions",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "func",
-              "array"
-            ]
-          }
-        },
-        {
-          "name": "popperClass",
-          "propType": "string"
-        },
-        {
-          "name": "triggerOnFocus",
-          "propType": "bool"
-        },
-        {
-          "name": "selectWhenUnmatched",
-          "propType": "bool"
-        },
-        {
-          "name": "hideLoading",
-          "propType": "bool"
-        },
-        {
-          "name": "label",
-          "propType": "string"
-        },
-        {
-          "name": "teleported",
-          "propType": "bool"
-        },
-        {
-          "name": "highlightFirstItem",
-          "propType": "bool"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "valueKey",
-            "title": "valueKey",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "debounce",
-            "title": "debounce",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "placement",
-            "title": "placement",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "fetchSuggestions",
-            "title": "fetchSuggestions",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "popperClass",
-            "title": "popperClass",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "triggerOnFocus",
-            "title": "triggerOnFocus",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "selectWhenUnmatched",
-            "title": "selectWhenUnmatched",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "hideLoading",
-            "title": "hideLoading",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "label",
-            "title": "label",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "teleported",
-            "title": "teleported",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "highlightFirstItem",
-            "title": "highlightFirstItem",
-            "setter": "BoolSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onUpdate:modelvalue",
-            "onInput",
-            "onChange",
-            "onFocus",
-            "onBlur",
-            "onClear",
-            "onSelect"
-          ]
-        }
-      },
-      "keywords": "ElAutocomplete"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElAvatar",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElAvatar",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "size",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "number",
-              "string"
-            ]
-          }
-        },
-        {
-          "name": "shape",
-          "propType": "string"
-        },
-        {
-          "name": "icon",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "object",
-              "func"
-            ]
-          }
-        },
-        {
-          "name": "src",
-          "propType": "string"
-        },
-        {
-          "name": "alt",
-          "propType": "string"
-        },
-        {
-          "name": "srcSet",
-          "propType": "string"
-        },
-        {
-          "name": "fit",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "size",
-            "title": "尺寸",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "shape",
-            "title": "shape",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "icon",
-            "title": "图标组件",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "src",
-            "title": "src",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "alt",
-            "title": "alt",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "srcSet",
-            "title": "srcSet",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "fit",
-            "title": "fit",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onError"
-          ]
-        }
-      },
-      "keywords": "ElAvatar"
-    },
-    {
-      "category": "导航",
-      "componentName": "ElBacktop",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElBacktop",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "visibilityHeight",
-          "propType": "number"
-        },
-        {
-          "name": "target",
-          "propType": "string"
-        },
-        {
-          "name": "right",
-          "propType": "number"
-        },
-        {
-          "name": "bottom",
-          "propType": "number"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "visibilityHeight",
-            "title": "visibilityHeight",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "target",
-            "title": "target",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "right",
-            "title": "right",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "bottom",
-            "title": "bottom",
-            "setter": {
-              "componentName": "TODO"
-            }
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onClick"
-          ]
-        }
-      },
-      "keywords": "ElBacktop"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElBadge",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElBadge",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "value",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "number"
-            ]
-          }
-        },
-        {
-          "name": "max",
-          "propType": "number"
-        },
-        {
-          "name": "isDot",
-          "propType": "bool"
-        },
-        {
-          "name": "hidden",
-          "propType": "bool"
-        },
-        {
-          "name": "type",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "value",
-            "title": "value",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "max",
-            "title": "max",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "isDot",
-            "title": "isDot",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "hidden",
-            "title": "hidden",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "type",
-            "title": "类型",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElBadge"
-    },
-    {
-      "category": "导航",
-      "componentName": "ElBreadcrumb",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElBreadcrumb",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "separator",
-          "propType": "string"
-        },
-        {
-          "name": "separatorIcon",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "object",
-              "func"
-            ]
-          }
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "separator",
-            "title": "separator",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "separatorIcon",
-            "title": "separatorIcon",
-            "setter": {
-              "componentName": "TODO"
-            }
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElBreadcrumb"
-    },
-    {
-      "category": "导航",
-      "componentName": "ElBreadcrumbItem",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElBreadcrumbItem",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "to",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "object"
-            ]
-          }
-        },
-        {
-          "name": "replace",
-          "propType": "bool"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "to",
-            "title": "to",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "replace",
-            "title": "replace",
-            "setter": "BoolSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        }
-      },
-      "keywords": "ElBreadcrumbItem"
-    },
-    {
       "category": "基础",
       "componentName": "ElButton",
       "npm": {
@@ -686,7 +29,10 @@
       },
       "props": [{
           "name": "children",
-          "propType": "string"
+          "propType": {
+            "type": "oneOfType",
+            "value": ["node", "string"]
+          }
         },
         {
           "name": "size",
@@ -769,13 +115,25 @@
         {
           "name": "autoInsertSpace",
           "propType": "bool"
+        },
+        {
+          "name": "default",
+          "propType": "node"
+        },
+        {
+          "name": "icon",
+          "propType": "node"
+        },
+        {
+          "name": "loading",
+          "propType": "node"
         }
       ],
       "configure": {
         "props": [{
             "name": "children",
             "title": "children",
-            "setter": "StringSetter"
+            "setter": ["SlotSetter", "StringSetter", "VariableSetter"]
           },
           {
             "name": "size",
@@ -868,6 +226,27 @@
           },
           {
             "name": "default",
+            "title": "default",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "icon",
+            "title": "图标组件",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "loading",
+            "title": "显示加载状态",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "default",
             "title": "slot-default",
             "setter": {
               "componentName": "SlotSetter",
@@ -909,6 +288,10 @@
           "events": [
             "onClick"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElButton"
@@ -949,7 +332,8 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElButtonGroup"
@@ -964,7 +348,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "string"
         },
         {
@@ -974,9 +358,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": "StringSetter"
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "range",
@@ -990,9 +374,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onInput"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElCalendar"
@@ -1024,6 +411,10 @@
         {
           "name": "shadow",
           "propType": "string"
+        },
+        {
+          "name": "header",
+          "propType": "node"
         }
       ],
       "configure": {
@@ -1043,6 +434,25 @@
             "name": "shadow",
             "title": "shadow",
             "setter": "StringSetter"
+          },
+          {
+            "name": "header",
+            "title": "header",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "header",
+            "title": "header-slot",
+            "setter": {
+              "componentName": "SlotSetter",
+              "initialValue": {
+                "type": "JSSlot",
+                "title": "header-slot",
+                "value": []
+              }
+            }
           }
         ],
         "supports": {
@@ -1051,193 +461,11 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElCard"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElCarousel",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElCarousel",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "initialIndex",
-          "propType": "number"
-        },
-        {
-          "name": "height",
-          "propType": "string"
-        },
-        {
-          "name": "trigger",
-          "propType": "string"
-        },
-        {
-          "name": "autoplay",
-          "propType": "bool"
-        },
-        {
-          "name": "interval",
-          "propType": "number"
-        },
-        {
-          "name": "indicatorPosition",
-          "propType": "string"
-        },
-        {
-          "name": "indicator",
-          "propType": "bool"
-        },
-        {
-          "name": "arrow",
-          "propType": "string"
-        },
-        {
-          "name": "type",
-          "propType": "string"
-        },
-        {
-          "name": "loop",
-          "propType": "bool"
-        },
-        {
-          "name": "direction",
-          "propType": "string"
-        },
-        {
-          "name": "pauseOnHover",
-          "propType": "bool"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "initialIndex",
-            "title": "initialIndex",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "height",
-            "title": "height",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "trigger",
-            "title": "trigger",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "autoplay",
-            "title": "autoplay",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "interval",
-            "title": "interval",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "indicatorPosition",
-            "title": "indicatorPosition",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "indicator",
-            "title": "indicator",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "arrow",
-            "title": "arrow",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "type",
-            "title": "类型",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "loop",
-            "title": "loop",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "direction",
-            "title": "direction",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "pauseOnHover",
-            "title": "pauseOnHover",
-            "setter": "BoolSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onChange"
-          ]
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElCarousel"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElCarouselItem",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElCarouselItem",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "name",
-          "propType": "string"
-        },
-        {
-          "name": "label",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "number"
-            ]
-          }
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "name",
-            "title": "name",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "label",
-            "title": "label",
-            "setter": {
-              "componentName": "TODO"
-            }
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        }
-      },
-      "keywords": "ElCarouselItem"
     },
     {
       "category": "表单",
@@ -1249,7 +477,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "any"
         },
         {
@@ -1323,11 +551,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "options",
@@ -1437,6 +663,10 @@
             "on5",
             "on6"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElCascader"
@@ -1455,7 +685,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -1541,11 +771,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "label",
@@ -1620,9 +848,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElCheckbox"
@@ -1637,7 +868,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -1718,11 +949,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "label",
@@ -1797,12 +1026,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElCheckboxButton"
@@ -1817,7 +1046,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "array"
         },
         {
@@ -1859,11 +1088,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "disabled",
@@ -1919,12 +1146,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElCheckboxGroup"
@@ -2083,6 +1310,10 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElCol"
@@ -2101,7 +1332,7 @@
           "propType": "bool"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -2119,23 +1350,21 @@
             "setter": "BoolSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           }
         ],
         "supports": {
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElCollapse"
@@ -2191,152 +1420,13 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElCollapseItem"
-    },
-    {
-      "category": "布局",
-      "componentName": "ElAside",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElAside",
-        "destructuring": true
-      },
-      "props": [{
-        "name": "width",
-        "propType": "string"
-      }],
-      "configure": {
-        "props": [{
-          "name": "width",
-          "title": "width",
-          "setter": "StringSetter"
-        }],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElAside"
-    },
-    {
-      "category": "布局",
-      "componentName": "ElContainer",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElContainer",
-        "destructuring": true
-      },
-      "props": [{
-        "name": "direction",
-        "propType": "string"
-      }],
-      "configure": {
-        "props": [{
-          "name": "direction",
-          "title": "direction",
-          "setter": "StringSetter"
-        }],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElContainer"
-    },
-    {
-      "category": "布局",
-      "componentName": "ElFooter",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElFooter",
-        "destructuring": true
-      },
-      "props": [{
-        "name": "height",
-        "propType": "string"
-      }],
-      "configure": {
-        "props": [{
-          "name": "height",
-          "title": "height",
-          "setter": "StringSetter"
-        }],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElFooter"
-    },
-    {
-      "category": "布局",
-      "componentName": "ElHeader",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElHeader",
-        "destructuring": true
-      },
-      "props": [{
-        "name": "height",
-        "propType": "string"
-      }],
-      "configure": {
-        "props": [{
-          "name": "height",
-          "title": "height",
-          "setter": "StringSetter"
-        }],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElHeader"
-    },
-    {
-      "category": "布局",
-      "componentName": "ElMain",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElMain",
-        "destructuring": true
-      },
-      "props": [],
-      "configure": {
-        "props": [],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        },
-        "component": {
-          "isContainer": true
-        }
-      },
-      "keywords": "ElMain"
     },
     {
       "category": "表单",
@@ -2432,7 +1522,7 @@
           "propType": "object"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -2617,11 +1707,9 @@
             }
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "rangeSeparator",
@@ -2733,6 +1821,10 @@
           "events": [
             "on0"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElDatePicker"
@@ -2822,7 +1914,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "bool"
         },
         {
@@ -2943,9 +2035,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": "BoolSetter"
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "modalClass",
@@ -2980,10 +2072,13 @@
             "onOpened",
             "onClose",
             "onClosed",
-            "onUpdate:modelvalue",
             "onOpenautofocus",
             "onCloseautofocus"
           ]
+        },
+        "component": {
+          "isContainer": true,
+          "isModal": true
         }
       },
       "keywords": "ElDialog"
@@ -3031,6 +2126,10 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElDivider"
@@ -3120,7 +2219,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "bool"
         },
         {
@@ -3263,9 +2362,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": "BoolSetter"
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "modalClass",
@@ -3322,10 +2421,13 @@
             "onOpened",
             "onClose",
             "onClosed",
-            "onUpdate:modelvalue",
             "onOpenautofocus",
             "onCloseautofocus"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElDrawer"
@@ -3546,7 +2648,8 @@
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElDropdown"
@@ -3634,58 +2737,13 @@
             "on1",
             "on2"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElDropdownItem"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElEmpty",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElEmpty",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "image",
-          "propType": "string"
-        },
-        {
-          "name": "imageSize",
-          "propType": "number"
-        },
-        {
-          "name": "description",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "image",
-            "title": "image",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "imageSize",
-            "title": "imageSize",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "description",
-            "title": "description",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        }
-      },
-      "keywords": "ElEmpty"
     },
     {
       "category": "表单",
@@ -3845,7 +2903,8 @@
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElForm"
@@ -3999,7 +3058,8 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElFormItem"
@@ -4046,6 +3106,10 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElIcon"
@@ -4193,6 +3257,10 @@
             "onSwitch",
             "onClose"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElImage"
@@ -4285,6 +3353,10 @@
             "onClose",
             "onSwitch"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElImageViewer"
@@ -4311,7 +3383,7 @@
           "propType": "bool"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -4448,11 +3520,9 @@
             "setter": "BoolSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "type",
@@ -4568,7 +3638,6 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onInput",
             "onChange",
             "onFocus",
@@ -4581,6 +3650,10 @@
             "onCompositionupdate",
             "onCompositionend"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElInput"
@@ -4615,7 +3688,7 @@
           "propType": "number"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "number"
         },
         {
@@ -4695,11 +3768,9 @@
             }
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "disabled",
@@ -4758,9 +3829,12 @@
             "onChange",
             "onBlur",
             "onFocus",
-            "onInput",
-            "onUpdate:modelvalue"
+            "onInput"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElInputNumber"
@@ -4846,6 +3920,10 @@
           "events": [
             "onClick"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElLink"
@@ -5033,6 +4111,10 @@
             "onPrev-click",
             "onNext-click"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElPagination"
@@ -5185,156 +4267,13 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElPopconfirm"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElProgress",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElProgress",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "type",
-          "propType": "string"
-        },
-        {
-          "name": "percentage",
-          "propType": "number"
-        },
-        {
-          "name": "status",
-          "propType": "string"
-        },
-        {
-          "name": "indeterminate",
-          "propType": "bool"
-        },
-        {
-          "name": "duration",
-          "propType": "number"
-        },
-        {
-          "name": "strokeWidth",
-          "propType": "number"
-        },
-        {
-          "name": "strokeLinecap",
-          "propType": "string"
-        },
-        {
-          "name": "textInside",
-          "propType": "bool"
-        },
-        {
-          "name": "width",
-          "propType": "number"
-        },
-        {
-          "name": "showText",
-          "propType": "bool"
-        },
-        {
-          "name": "color",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "array",
-              "func"
-            ]
-          }
-        },
-        {
-          "name": "format",
-          "propType": "func"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "type",
-            "title": "类型",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "percentage",
-            "title": "percentage",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "status",
-            "title": "status",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "indeterminate",
-            "title": "indeterminate",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "duration",
-            "title": "duration",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "strokeWidth",
-            "title": "strokeWidth",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "strokeLinecap",
-            "title": "strokeLinecap",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "textInside",
-            "title": "textInside",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "width",
-            "title": "width",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "showText",
-            "title": "showText",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "color",
-            "title": "color",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "format",
-            "title": "format",
-            "setter": {
-              "componentName": "TODO"
-            }
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        }
-      },
-      "keywords": "ElProgress"
     },
     {
       "category": "表单",
@@ -5369,7 +4308,7 @@
           }
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -5412,11 +4351,9 @@
             }
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "name",
@@ -5433,9 +4370,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElRadio"
@@ -5503,7 +4443,8 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElRadioButton"
@@ -5530,7 +4471,7 @@
           "propType": "bool"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -5574,11 +4515,9 @@
             "setter": "BoolSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "fill",
@@ -5605,309 +4544,15 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange"
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElRadioGroup"
-    },
-    {
-      "category": "表单",
-      "componentName": "ElRate",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElRate",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "modelValue",
-          "propType": "number"
-        },
-        {
-          "name": "id",
-          "propType": "string"
-        },
-        {
-          "name": "lowThreshold",
-          "propType": "number"
-        },
-        {
-          "name": "highThreshold",
-          "propType": "number"
-        },
-        {
-          "name": "max",
-          "propType": "number"
-        },
-        {
-          "name": "colors",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "array",
-              "object"
-            ]
-          }
-        },
-        {
-          "name": "voidColor",
-          "propType": "string"
-        },
-        {
-          "name": "disabledVoidColor",
-          "propType": "string"
-        },
-        {
-          "name": "icons",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "array",
-              "object"
-            ]
-          }
-        },
-        {
-          "name": "voidIcon",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "object",
-              "func"
-            ]
-          }
-        },
-        {
-          "name": "disabledVoidIcon",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "object",
-              "func"
-            ]
-          }
-        },
-        {
-          "name": "disabled",
-          "propType": "bool"
-        },
-        {
-          "name": "allowHalf",
-          "propType": "bool"
-        },
-        {
-          "name": "showText",
-          "propType": "bool"
-        },
-        {
-          "name": "showScore",
-          "propType": "bool"
-        },
-        {
-          "name": "textColor",
-          "propType": "string"
-        },
-        {
-          "name": "texts",
-          "propType": "array"
-        },
-        {
-          "name": "scoreTemplate",
-          "propType": "string"
-        },
-        {
-          "name": "size",
-          "propType": "string"
-        },
-        {
-          "name": "label",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "id",
-            "title": "id",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "lowThreshold",
-            "title": "lowThreshold",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "highThreshold",
-            "title": "highThreshold",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "max",
-            "title": "max",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "colors",
-            "title": "colors",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "voidColor",
-            "title": "voidColor",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "disabledVoidColor",
-            "title": "disabledVoidColor",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "icons",
-            "title": "icons",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "voidIcon",
-            "title": "voidIcon",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "disabledVoidIcon",
-            "title": "disabledVoidIcon",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "disabled",
-            "title": "是否禁用",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "allowHalf",
-            "title": "allowHalf",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "showText",
-            "title": "showText",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "showScore",
-            "title": "showScore",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "textColor",
-            "title": "textColor",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "texts",
-            "title": "texts",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "scoreTemplate",
-            "title": "scoreTemplate",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "size",
-            "title": "尺寸",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "label",
-            "title": "label",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onChange",
-            "onUpdate:modelvalue"
-          ]
-        }
-      },
-      "keywords": "ElRate"
-    },
-    {
-      "category": "数据展示",
-      "componentName": "ElResult",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElResult",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "title",
-          "propType": "string"
-        },
-        {
-          "name": "subTitle",
-          "propType": "string"
-        },
-        {
-          "name": "icon",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "title",
-            "title": "title",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "subTitle",
-            "title": "subTitle",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "icon",
-            "title": "图标组件",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": []
-        }
-      },
-      "keywords": "ElResult"
     },
     {
       "category": "布局",
@@ -5965,7 +4610,8 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElRow"
@@ -5988,7 +4634,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -6145,11 +4791,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "autocomplete",
@@ -6324,6 +4968,10 @@
             "on5",
             "on6"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElSelect"
@@ -6420,7 +5068,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "any"
         },
         {
@@ -6599,11 +5247,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "multiple",
@@ -6711,6 +5357,10 @@
             "on5",
             "on6"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElSelectV2"
@@ -6725,7 +5375,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -6825,11 +5475,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "id",
@@ -6960,10 +5608,13 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onInput",
             "onChange"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElSlider"
@@ -7113,104 +5764,13 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElSpace"
-    },
-    {
-      "category": "导航",
-      "componentName": "ElSteps",
-      "npm": {
-        "package": "element-plus",
-        "version": "2.2.6",
-        "exportName": "ElSteps",
-        "destructuring": true
-      },
-      "props": [{
-          "name": "space",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "number",
-              "string"
-            ]
-          }
-        },
-        {
-          "name": "active",
-          "propType": "number"
-        },
-        {
-          "name": "direction",
-          "propType": "string"
-        },
-        {
-          "name": "alignCenter",
-          "propType": "bool"
-        },
-        {
-          "name": "simple",
-          "propType": "bool"
-        },
-        {
-          "name": "finishStatus",
-          "propType": "string"
-        },
-        {
-          "name": "processStatus",
-          "propType": "string"
-        }
-      ],
-      "configure": {
-        "props": [{
-            "name": "space",
-            "title": "space",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "active",
-            "title": "active",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "direction",
-            "title": "direction",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "alignCenter",
-            "title": "alignCenter",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "simple",
-            "title": "simple",
-            "setter": "BoolSetter"
-          },
-          {
-            "name": "finishStatus",
-            "title": "finishStatus",
-            "setter": "StringSetter"
-          },
-          {
-            "name": "processStatus",
-            "title": "processStatus",
-            "setter": "StringSetter"
-          }
-        ],
-        "supports": {
-          "style": true,
-          "loop": true,
-          "events": [
-            "onChange"
-          ]
-        }
-      },
-      "keywords": "ElSteps"
     },
     {
       "category": "表单",
@@ -7222,7 +5782,7 @@
         "destructuring": true
       },
       "props": [{
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -7362,11 +5922,9 @@
       ],
       "configure": {
         "props": [{
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "value",
@@ -7489,10 +6047,13 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onChange",
             "onInput"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElSwitch"
@@ -7557,38 +6118,6 @@
         {
           "name": "summaryMethod",
           "propType": "func"
-        },
-        {
-          "name": "rowClassName",
-          "propType": "any"
-        },
-        {
-          "name": "rowStyle",
-          "propType": "any"
-        },
-        {
-          "name": "cellClassName",
-          "propType": "any"
-        },
-        {
-          "name": "cellStyle",
-          "propType": "any"
-        },
-        {
-          "name": "headerRowClassName",
-          "propType": "any"
-        },
-        {
-          "name": "headerRowStyle",
-          "propType": "any"
-        },
-        {
-          "name": "headerCellClassName",
-          "propType": "any"
-        },
-        {
-          "name": "headerCellStyle",
-          "propType": "any"
         },
         {
           "name": "highlightCurrentRow",
@@ -7667,35 +6196,12 @@
         "props": [{
             "name": "data",
             "title": "data",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "setter": "ExpressionSetter"
           },
           {
             "name": "size",
             "title": "尺寸",
             "setter": "StringSetter"
-          },
-          {
-            "name": "width",
-            "title": "width",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "height",
-            "title": "height",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "maxHeight",
-            "title": "maxHeight",
-            "setter": {
-              "componentName": "TODO"
-            }
           },
           {
             "name": "fit",
@@ -7742,62 +6248,6 @@
             }
           },
           {
-            "name": "rowClassName",
-            "title": "rowClassName",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "rowStyle",
-            "title": "rowStyle",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "cellClassName",
-            "title": "cellClassName",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "cellStyle",
-            "title": "cellStyle",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "headerRowClassName",
-            "title": "headerRowClassName",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "headerRowStyle",
-            "title": "headerRowStyle",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "headerCellClassName",
-            "title": "headerCellClassName",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
-            "name": "headerCellStyle",
-            "title": "headerCellStyle",
-            "setter": {
-              "componentName": "TODO"
-            }
-          },
-          {
             "name": "highlightCurrentRow",
             "title": "highlightCurrentRow",
             "setter": "BoolSetter"
@@ -7813,13 +6263,6 @@
             "name": "emptyText",
             "title": "emptyText",
             "setter": "StringSetter"
-          },
-          {
-            "name": "expandRowKeys",
-            "title": "expandRowKeys",
-            "setter": {
-              "componentName": "TODO"
-            }
           },
           {
             "name": "defaultExpandAll",
@@ -7908,28 +6351,12 @@
           "style": true,
           "loop": true,
           "events": [
-            "on0",
-            "on1",
-            "on2",
-            "on3",
-            "on4",
-            "on5",
-            "on6",
-            "on7",
-            "on8",
-            "on9",
-            "on10",
-            "on11",
-            "on12",
-            "on13",
-            "on14",
-            "on15",
-            "on16",
-            "on17"
+
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElTable"
@@ -7944,6 +6371,13 @@
         "destructuring": true
       },
       "props": [{
+          "name": "children",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["node", "string"]
+          }
+        },
+        {
           "name": "type",
           "propType": "string"
         },
@@ -8076,10 +6510,26 @@
         {
           "name": "sortOrders",
           "propType": "array"
+        },
+        {
+          "name": "header",
+          "propType": "node"
+        },
+        {
+          "name": "default",
+          "propType": "node"
         }
       ],
       "configure": {
         "props": [{
+            "name": "children",
+            "propType": {
+              "type": "oneOfType",
+              "value": ["node", "string"]
+            },
+            "setter": ["SlotSetter", "StringSetter"]
+          },
+          {
             "name": "type",
             "title": "类型",
             "setter": "StringSetter"
@@ -8254,24 +6704,38 @@
           },
           {
             "name": "header",
-            "title": "headerslot",
+            "title": "header",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "default",
+            "title": "default",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "header",
+            "title": "header-slot",
             "setter": {
               "componentName": "SlotSetter",
               "initialValue": {
                 "type": "JSSlot",
-                "title": "headerslot",
+                "title": "header-slot",
                 "value": []
               }
             }
           },
           {
             "name": "default",
-            "title": "defaultslot",
+            "title": "default-slot",
             "setter": {
               "componentName": "SlotSetter",
               "initialValue": {
                 "type": "JSSlot",
-                "title": "defaultslot",
+                "title": "default-slot",
                 "value": []
               }
             }
@@ -8281,9 +6745,516 @@
           "style": true,
           "loop": true,
           "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElTableColumn"
+    },
+    {
+      "category": "数据展示",
+      "componentName": "ElTableV2",
+      "npm": {
+        "package": "element-plus",
+        "version": "2.2.6",
+        "exportName": "ElTableV2",
+        "destructuring": true
+      },
+      "props": [{
+          "name": "cache",
+          "propType": "number"
+        },
+        {
+          "name": "estimatedRowHeight",
+          "propType": "number"
+        },
+        {
+          "name": "rowKey",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "string",
+              "number",
+              "symbol"
+            ]
+          }
+        },
+        {
+          "name": "headerClass",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "string",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "headerProps",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "object",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "headerCellProps",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "object",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "headerHeight",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "number",
+              "array"
+            ]
+          }
+        },
+        {
+          "name": "footerHeight",
+          "propType": "number"
+        },
+        {
+          "name": "rowClass",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "string",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "rowProps",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "object",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "rowHeight",
+          "propType": "number"
+        },
+        {
+          "name": "cellProps",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "object",
+              "func"
+            ]
+          }
+        },
+        {
+          "name": "columns",
+          "propType": "array"
+        },
+        {
+          "name": "data",
+          "propType": "array"
+        },
+        {
+          "name": "dataGetter",
+          "propType": "func"
+        },
+        {
+          "name": "fixedData",
+          "propType": "array"
+        },
+        {
+          "name": "expandColumnKey",
+          "propType": "string"
+        },
+        {
+          "name": "expandedRowKeys",
+          "propType": "array"
+        },
+        {
+          "name": "defaultExpandedRowKeys",
+          "propType": "array"
+        },
+        {
+          "name": "class",
+          "propType": "string"
+        },
+        {
+          "name": "fixed",
+          "propType": "bool"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        },
+        {
+          "name": "width",
+          "propType": "number"
+        },
+        {
+          "name": "height",
+          "propType": "number"
+        },
+        {
+          "name": "maxHeight",
+          "propType": "number"
+        },
+        {
+          "name": "useIsScrolling",
+          "propType": "bool"
+        },
+        {
+          "name": "indentSize",
+          "propType": "number"
+        },
+        {
+          "name": "iconSize",
+          "propType": "number"
+        },
+        {
+          "name": "hScrollbarSize",
+          "propType": "number"
+        },
+        {
+          "name": "vScrollbarSize",
+          "propType": "number"
+        },
+        {
+          "name": "scrollbarAlwaysOn",
+          "propType": "bool"
+        },
+        {
+          "name": "sortBy",
+          "propType": "object"
+        },
+        {
+          "name": "sortState",
+          "propType": "object"
+        },
+        {
+          "name": "onColumnSort",
+          "propType": "func"
+        },
+        {
+          "name": "onExpandedRowsChange",
+          "propType": "func"
+        },
+        {
+          "name": "onEndReached",
+          "propType": "func"
+        },
+        {
+          "name": "onRowExpand",
+          "propType": "func"
+        },
+        {
+          "name": "onScroll",
+          "propType": "func"
+        },
+        {
+          "name": "onRowsRendered",
+          "propType": "func"
+        },
+        {
+          "name": "rowEventHandlers",
+          "propType": "object"
+        }
+      ],
+      "configure": {
+        "props": [{
+            "name": "cache",
+            "title": "cache",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "estimatedRowHeight",
+            "title": "estimatedRowHeight",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "rowKey",
+            "title": "rowKey",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "headerClass",
+            "title": "headerClass",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "headerProps",
+            "title": "headerProps",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "headerCellProps",
+            "title": "headerCellProps",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "headerHeight",
+            "title": "headerHeight",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "footerHeight",
+            "title": "footerHeight",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "rowClass",
+            "title": "rowClass",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "rowProps",
+            "title": "rowProps",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "rowHeight",
+            "title": "rowHeight",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "cellProps",
+            "title": "cellProps",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "columns",
+            "title": "columns",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "data",
+            "title": "data",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "dataGetter",
+            "title": "dataGetter",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "fixedData",
+            "title": "fixedData",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "expandColumnKey",
+            "title": "expandColumnKey",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "expandedRowKeys",
+            "title": "expandedRowKeys",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "defaultExpandedRowKeys",
+            "title": "defaultExpandedRowKeys",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "class",
+            "title": "class",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "fixed",
+            "title": "fixed",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "style",
+            "title": "style",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "width",
+            "title": "width",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "height",
+            "title": "height",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "maxHeight",
+            "title": "maxHeight",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "useIsScrolling",
+            "title": "useIsScrolling",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "indentSize",
+            "title": "indentSize",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "iconSize",
+            "title": "iconSize",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "hScrollbarSize",
+            "title": "hScrollbarSize",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "vScrollbarSize",
+            "title": "vScrollbarSize",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "scrollbarAlwaysOn",
+            "title": "scrollbarAlwaysOn",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "sortBy",
+            "title": "sortBy",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "sortState",
+            "title": "sortState",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onColumnSort",
+            "title": "onColumnSort",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onExpandedRowsChange",
+            "title": "onExpandedRowsChange",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onEndReached",
+            "title": "onEndReached",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onRowExpand",
+            "title": "onRowExpand",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onScroll",
+            "title": "onScroll",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "onRowsRendered",
+            "title": "onRowsRendered",
+            "setter": {
+              "componentName": "TODO"
+            }
+          },
+          {
+            "name": "rowEventHandlers",
+            "title": "rowEventHandlers",
+            "setter": {
+              "componentName": "TODO"
+            }
+          }
+        ],
+        "supports": {
+          "style": true,
+          "loop": true,
+          "events": []
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
+        }
+      },
+      "keywords": "ElTableV2"
     },
     {
       "category": "导航",
@@ -8356,7 +7327,8 @@
           "events": []
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElTabPane"
@@ -8393,7 +7365,7 @@
           "propType": "bool"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -8443,11 +7415,9 @@
             "setter": "BoolSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "editable",
@@ -8476,7 +7446,6 @@
           "style": true,
           "loop": true,
           "events": [
-            "onUpdate:modelvalue",
             "onTab-click",
             "onTab-change",
             "onEdit",
@@ -8485,7 +7454,8 @@
           ]
         },
         "component": {
-          "isContainer": true
+          "isContainer": true,
+          "isModal": false
         }
       },
       "keywords": "ElTabs"
@@ -8581,6 +7551,10 @@
             "onClose",
             "onClick"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElTag"
@@ -8679,7 +7653,7 @@
           "propType": "object"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": {
             "type": "oneOfType",
             "value": [
@@ -8864,11 +7838,9 @@
             }
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": {
-              "componentName": "TODO"
-            }
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "rangeSeparator",
@@ -8980,6 +7952,10 @@
           "events": [
             "on0"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElTimePicker"
@@ -8998,7 +7974,7 @@
           "propType": "string"
         },
         {
-          "name": "modelValue",
+          "name": "v-model",
           "propType": "string"
         },
         {
@@ -9077,9 +8053,9 @@
             "setter": "StringSetter"
           },
           {
-            "name": "modelValue",
-            "title": "modelValue",
-            "setter": "StringSetter"
+            "name": "v-model",
+            "title": "v-model",
+            "setter": "ExpressionSetter"
           },
           {
             "name": "disabled",
@@ -9165,6 +8141,10 @@
             "on2",
             "on3"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElTimeSelect"
@@ -9737,6 +8717,10 @@
             "on5",
             "on6"
           ]
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
         }
       },
       "keywords": "ElTooltip"
@@ -9748,31 +8732,6 @@
           "componentName": "ElCol",
           "library": "ElementPlus",
           "title": "列"
-        },
-        {
-          "componentName": "ElAside",
-          "library": "ElementPlus",
-          "title": "布局容器-侧边栏"
-        },
-        {
-          "componentName": "ElContainer",
-          "library": "ElementPlus",
-          "title": "布局容器-外层容器"
-        },
-        {
-          "componentName": "ElFooter",
-          "library": "ElementPlus",
-          "title": "布局容器-底栏"
-        },
-        {
-          "componentName": "ElHeader",
-          "library": "ElementPlus",
-          "title": "布局容器-顶栏"
-        },
-        {
-          "componentName": "ElMain",
-          "library": "ElementPlus",
-          "title": "布局容器-主要部分"
         },
         {
           "componentName": "ElRow",
@@ -9830,11 +8789,6 @@
     {
       "title": "表单",
       "children": [{
-          "componentName": "ElAutocomplete",
-          "library": "ElementPlus",
-          "title": "自动补全输入框"
-        },
-        {
           "componentName": "ElCascader",
           "library": "ElementPlus",
           "title": "级联选择器"
@@ -9944,11 +8898,6 @@
           "title": "单选按钮组"
         },
         {
-          "componentName": "ElRate",
-          "library": "ElementPlus",
-          "title": "评分"
-        },
-        {
           "componentName": "ElSelect",
           "library": "ElementPlus",
           "title": "选择框"
@@ -9983,16 +8932,6 @@
     {
       "title": "数据展示",
       "children": [{
-          "componentName": "ElAvatar",
-          "library": "ElementPlus",
-          "title": "头像"
-        },
-        {
-          "componentName": "ElBadge",
-          "library": "ElementPlus",
-          "title": "徽章"
-        },
-        {
           "componentName": "ElCalendar",
           "library": "ElementPlus",
           "title": "日历"
@@ -10003,16 +8942,6 @@
           "title": "卡片"
         },
         {
-          "componentName": "ElCarousel",
-          "library": "ElementPlus",
-          "title": "走马灯"
-        },
-        {
-          "componentName": "ElCarouselItem",
-          "library": "ElementPlus",
-          "title": "走马灯项"
-        },
-        {
           "componentName": "ElCollapse",
           "library": "ElementPlus",
           "title": "折叠面板"
@@ -10021,11 +8950,6 @@
           "componentName": "ElCollapseItem",
           "library": "ElementPlus",
           "title": "折叠面板项"
-        },
-        {
-          "componentName": "ElEmpty",
-          "library": "ElementPlus",
-          "title": "缺省"
         },
         {
           "componentName": "ElImage",
@@ -10043,16 +8967,6 @@
           "title": "分页"
         },
         {
-          "componentName": "ElProgress",
-          "library": "ElementPlus",
-          "title": "进度条"
-        },
-        {
-          "componentName": "ElResult",
-          "library": "ElementPlus",
-          "title": "结果"
-        },
-        {
           "componentName": "ElTable",
           "library": "ElementPlus",
           "title": "表格"
@@ -10061,6 +8975,11 @@
           "componentName": "ElTableColumn",
           "library": "ElementPlus",
           "title": "表格列"
+        },
+        {
+          "componentName": "ElTableV2",
+          "library": "ElementPlus",
+          "title": "虚拟化表格"
         },
         {
           "componentName": "ElTag",
@@ -10072,21 +8991,6 @@
     {
       "title": "导航",
       "children": [{
-          "componentName": "ElBacktop",
-          "library": "ElementPlus",
-          "title": "回到顶部"
-        },
-        {
-          "componentName": "ElBreadcrumb",
-          "library": "ElementPlus",
-          "title": "面包屑"
-        },
-        {
-          "componentName": "ElBreadcrumbItem",
-          "library": "ElementPlus",
-          "title": "面包屑项"
-        },
-        {
           "componentName": "ElDropdown",
           "library": "ElementPlus",
           "title": "下拉菜单"
@@ -10095,11 +8999,6 @@
           "componentName": "ElDropdownItem",
           "library": "ElementPlus",
           "title": "下拉菜单项"
-        },
-        {
-          "componentName": "ElSteps",
-          "library": "ElementPlus",
-          "title": "步骤条"
         },
         {
           "componentName": "ElTabPane",
@@ -10116,16 +9015,6 @@
     {
       "title": "反馈",
       "children": [{
-          "componentName": "ElAffix",
-          "library": "ElementPlus",
-          "title": "固钉"
-        },
-        {
-          "componentName": "ElAlert",
-          "library": "ElementPlus",
-          "title": "提示"
-        },
-        {
           "componentName": "ElDialog",
           "library": "ElementPlus",
           "title": "弹窗"
