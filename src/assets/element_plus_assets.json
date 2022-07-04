@@ -2165,10 +2165,6 @@
           "propType": "string"
         },
         {
-          "name": "v-model",
-          "propType": "bool"
-        },
-        {
           "name": "modalClass",
           "propType": "string"
         },
@@ -3632,17 +3628,6 @@
         {
           "name": "disabled",
           "propType": "bool"
-        },
-        {
-          "name": "v-model",
-          "propType": {
-            "type": "oneOfType",
-            "value": [
-              "string",
-              "number",
-              "object"
-            ]
-          }
         },
         {
           "name": "type",
