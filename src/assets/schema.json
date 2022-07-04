@@ -60,269 +60,98 @@
       "type": "JSFunction",
       "value": "function showDialog() {\n  this.dialog = true;\n}"
     },
-    "onSelect": {
+    "editRow": {
       "type": "JSFunction",
-      "value": "function onSelect() {\n  console.log(this.select);\n}"
+      "value": "function editRow(e, row) {\n  console.log(e, row);\n}"
     }
   },
-  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"user\": {\n      \"username\": \"111\",\n      \"password\": \"\"\n    },\n    tableData: [\n      {\n        date: '2016-05-03',\n        name: 'Tom',\n        address: 'No. 189, Grove St, Los Angeles',\n      },\n      {\n        date: '2016-05-02',\n        name: 'Tom',\n        address: 'No. 189, Grove St, Los Angeles',\n      },\n    ],\n    dialog: false,\n    select: ''\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  onClick() {\n    console.log(this.user)\n  }\n\trequest(){\n    console.log(this.dataSourceMap['info'])\n    this.dataSourceMap['info'].load({\n      data: {}\n    }).then(res => { })\n      .catch(error => { })\n\t}\n  showDialog() {\n    this.dialog = true\n  }\n\t\n\n\tonSelect(){\n    console.log(this.select)\n\t}\n}",
+  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"user\": {\n      \"username\": \"111\",\n      \"password\": \"\"\n    },\n    tableData: [\n      {\n        date: '2016-05-03',\n        name: 'Tom',\n        address: 'No. 189, Grove St, Los Angeles',\n      },\n      {\n        date: '2016-05-02',\n        name: 'Tom',\n        address: 'No. 189, Grove St, Los Angeles',\n      },\n    ],\n    dialog: false,\n    select: ''\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  onClick() {\n    console.log(this.user)\n  }\n\trequest(){\n    console.log(this.dataSourceMap['info'])\n    this.dataSourceMap['info'].load({\n      data: {}\n    }).then(res => { })\n      .catch(error => { })\n\t}\n  showDialog() {\n    this.dialog = true\n  }\n\t\n\n\teditRow(e, row){\n    console.log(e, row)\n\t}\n}",
   "hidden": false,
   "title": "",
   "isLocked": false,
   "condition": true,
   "conditionGroup": "",
   "children": [{
-      "componentName": "ElCard",
-      "id": "node_ocl4s37zdh2",
+      "componentName": "ElButton",
+      "id": "node_ocl564ogif4",
       "props": {
-        "segmented": {
-          "content": false,
-          "footer": false,
-          "action": false
+        "children": "显示弹窗",
+        "__events": {
+          "eventDataList": [{
+            "type": "componentEvent",
+            "name": "onClick",
+            "relatedEventName": "showDialog"
+          }],
+          "eventList": [{
+            "name": "onClick",
+            "disabled": true
+          }]
+        },
+        "onClick": {
+          "type": "JSFunction",
+          "value": "function(){this.showDialog.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
         }
       },
       "hidden": false,
       "title": "",
       "isLocked": false,
       "condition": true,
-      "conditionGroup": "",
-      "children": [{
-          "componentName": "ElForm",
-          "id": "node_ocl4w1q85d1",
-          "props": {
-            "label-width": 80,
-            "model": {
-              "type": "JSExpression",
-              "value": "this",
-              "mock": {
-                "type": "JSExpression",
-                "value": "this.user"
-              }
-            },
-            "label-align": "left",
-            "label-placement": "left",
-            "require-mark-placement": "right"
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": "",
-          "children": [{
-              "componentName": "ElFormItem",
-              "id": "node_ocl4w1q85d2",
-              "props": {
-                "label": "用户名"
-              },
-              "hidden": false,
-              "title": "",
-              "isLocked": false,
-              "condition": true,
-              "conditionGroup": "",
-              "children": [{
-                "componentName": "ElInput",
-                "id": "node_ocl4w1q85d3",
-                "props": {
-                  "placeholder": "请输入用户名",
-                  "v-model:value": {
-                    "type": "JSExpression",
-                    "value": "this.user.username"
-                  },
-                  "show-password-on": "click",
-                  "v-model": {
-                    "type": "JSExpression",
-                    "value": "this.user.username"
-                  }
-                },
-                "hidden": false,
-                "title": "",
-                "isLocked": false,
-                "condition": true,
-                "conditionGroup": ""
-              }]
-            },
-            {
-              "componentName": "ElFormItem",
-              "id": "node_ocl4w1q85d4",
-              "props": {
-                "label": "密码"
-              },
-              "hidden": false,
-              "title": "",
-              "isLocked": false,
-              "condition": true,
-              "conditionGroup": "",
-              "children": [{
-                "componentName": "ElInput",
-                "id": "node_ocl4w1q85d5",
-                "props": {
-                  "type": "password",
-                  "placeholder": "请输入密码",
-                  "v-model:value": {
-                    "type": "JSExpression",
-                    "value": "this.user.password"
-                  },
-                  "show-password-on": "click",
-                  "v-model": {
-                    "type": "JSExpression",
-                    "value": "this.user.password"
-                  }
-                },
-                "hidden": false,
-                "title": "",
-                "isLocked": false,
-                "condition": true,
-                "conditionGroup": ""
-              }]
-            }
-          ]
-        },
-        {
-          "componentName": "ElButton",
-          "id": "node_ocl4s37zdh1",
-          "props": {
-            "children": "提交",
-            "icon-placement": "left",
-            "attr-type": "button",
-            "type": "default",
-            "size": "medium",
-            "bordered": true,
-            "__events": {
-              "eventDataList": [{
-                "type": "componentEvent",
-                "name": "onClick",
-                "relatedEventName": "onClick"
-              }],
-              "eventList": [{
-                "name": "onClick",
-                "disabled": true
-              }]
-            },
-            "onClick": {
-              "type": "JSFunction",
-              "value": "function(){this.onClick.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-            }
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        },
-        {
-          "componentName": "ElButton",
-          "id": "node_ocl4w1x2ts1",
-          "props": {
-            "children": "发起请求",
-            "icon-placement": "left",
-            "attr-type": "button",
-            "type": "default",
-            "size": "default",
-            "bordered": true,
-            "__events": {
-              "eventDataList": [{
-                "type": "componentEvent",
-                "name": "onClick",
-                "relatedEventName": "request"
-              }],
-              "eventList": [{
-                "name": "onClick",
-                "disabled": true
-              }]
-            },
-            "onClick": {
-              "type": "JSFunction",
-              "value": "function(){this.request.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-            }
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        },
-        {
-          "componentName": "ElButton",
-          "id": "node_ocl4yxjdtj1",
-          "props": {
-            "children": "显示弹窗",
-            "__events": {
-              "eventDataList": [{
-                "type": "componentEvent",
-                "name": "onClick",
-                "relatedEventName": "showDialog"
-              }],
-              "eventList": [{
-                "name": "onClick",
-                "disabled": true
-              }]
-            },
-            "onClick": {
-              "type": "JSFunction",
-              "value": "function(){this.showDialog.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-            }
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        }
-      ]
+      "conditionGroup": ""
     },
     {
-      "componentName": "ElTable",
-      "id": "node_ocl4z69dkg1",
+      "componentName": "NDataTable",
+      "id": "node_ocl564hehq1",
       "props": {
-        "data": {
-          "type": "JSExpression",
-          "value": "this.tableData"
-        }
-      },
-      "hidden": false,
-      "title": "",
-      "isLocked": false,
-      "condition": true,
-      "conditionGroup": "",
-      "children": [{
-          "componentName": "ElTableColumn",
-          "id": "node_ocl4z69dkg3",
-          "props": {
-            "label": "address",
-            "prop": "address"
+        "columns": [{
+            "title": "日期",
+            "key": "date",
+            "align": "left",
+            "fixed": ""
           },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        },
-        {
-          "componentName": "ElTableColumn",
-          "id": "node_ocl4z69dkg2",
-          "props": {
-            "label": "date",
-            "prop": "date"
+          {
+            "title": "名字",
+            "key": "name",
+            "align": "left",
+            "fixed": ""
           },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        },
-        {
-          "componentName": "ElTableColumn",
-          "id": "node_ocl4z69dkg4",
-          "props": {
-            "children": {
+          {
+            "title": "地址",
+            "key": "address",
+            "align": "left",
+            "fixed": ""
+          },
+          {
+            "title": "操作",
+            "key": "op",
+            "align": "left",
+            "fixed": "",
+            "render": {
               "type": "JSSlot",
+              "params": [
+                "row",
+                "index"
+              ],
               "value": [{
                   "componentName": "ElButton",
-                  "id": "node_ocl4z69dkg7",
+                  "id": "node_ocl564hf524",
                   "props": {
-                    "children": [
-                      "按钮"
-                    ]
+                    "children": "编辑",
+                    "__events": {
+                      "eventDataList": [{
+                        "type": "componentEvent",
+                        "name": "onClick",
+                        "relatedEventName": "editRow",
+                        "paramStr": "{\n \t \"testKey\":this.row\n}"
+                      }],
+                      "eventList": [{
+                        "name": "onClick",
+                        "disabled": true
+                      }]
+                    },
+                    "onClick": {
+                      "type": "JSFunction",
+                      "value": "function(){this.editRow.apply(this,Array.prototype.slice.call(arguments).concat([{\n \t \"testKey\":this.row\n}])) }"
+                    }
                   },
                   "hidden": false,
                   "title": "",
@@ -332,11 +161,9 @@
                 },
                 {
                   "componentName": "ElButton",
-                  "id": "node_ocl4z69dkg8",
+                  "id": "node_ocl564hf523",
                   "props": {
-                    "children": [
-                      "按钮"
-                    ]
+                    "children": "删除"
                   },
                   "hidden": false,
                   "title": "",
@@ -346,70 +173,19 @@
                 }
               ],
               "title": "插槽容器"
-            },
-            "label": "操作"
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        }
-      ]
-    },
-    {
-      "componentName": "ElSelect",
-      "id": "node_ocl50bzmtq2",
-      "props": {
-        "v-model": {
+            }
+          }
+        ],
+        "data": {
           "type": "JSExpression",
-          "value": "this.select"
+          "value": "this.tableData"
         }
       },
       "hidden": false,
       "title": "",
       "isLocked": false,
       "condition": true,
-      "conditionGroup": "",
-      "children": [{
-          "componentName": "ElOption",
-          "id": "node_ocl50bzmtq4",
-          "props": {
-            "value": {
-              "type": "JSExpression",
-              "value": "'ddd'"
-            },
-            "label": {
-              "type": "JSExpression",
-              "value": "'dsdsdsdsds'"
-            }
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        },
-        {
-          "componentName": "ElOption",
-          "id": "node_ocl50bzmtq3",
-          "props": {
-            "value": {
-              "type": "JSExpression",
-              "value": "111"
-            },
-            "label": {
-              "type": "JSExpression",
-              "value": "22222"
-            }
-          },
-          "hidden": false,
-          "title": "",
-          "isLocked": false,
-          "condition": true,
-          "conditionGroup": ""
-        }
-      ]
+      "conditionGroup": ""
     },
     {
       "componentName": "ElDialog",
@@ -430,7 +206,7 @@
           }
         }
       },
-      "hidden": true,
+      "hidden": false,
       "title": "",
       "isLocked": false,
       "condition": true,
@@ -599,7 +375,7 @@
                 "value": "function(){this.request.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
               }
             },
-            "hidden": false,
+            "hidden": true,
             "title": "",
             "isLocked": false,
             "condition": true,
@@ -607,35 +383,6 @@
           }
         ]
       }]
-    },
-    {
-      "componentName": "ElButton",
-      "id": "node_ocl50bzo9g2",
-      "props": {
-        "children": [
-          "按钮"
-        ],
-        "__events": {
-          "eventDataList": [{
-            "type": "componentEvent",
-            "name": "onClick",
-            "relatedEventName": "onSelect"
-          }],
-          "eventList": [{
-            "name": "onClick",
-            "disabled": true
-          }]
-        },
-        "onClick": {
-          "type": "JSFunction",
-          "value": "function(){this.onSelect.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-        }
-      },
-      "hidden": false,
-      "title": "",
-      "isLocked": false,
-      "condition": true,
-      "conditionGroup": ""
     }
   ]
 }
