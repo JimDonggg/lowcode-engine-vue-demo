@@ -10,18 +10,12 @@ export default {
   props: [
     {
       name: 'header',
-      propType: 'string',
-      title: '标题',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'bodyStyle',
       propType: {
         type: 'oneOfType',
-        value: ['string', 'array'],
+        value: ['node', 'string'],
       },
-      title: 'bodyStyle',
-      setter: false,
+      title: '标题',
+      setter: ['SlotSetter', 'StringSetter', 'VariableSetter'],
     },
     {
       name: 'shadow',

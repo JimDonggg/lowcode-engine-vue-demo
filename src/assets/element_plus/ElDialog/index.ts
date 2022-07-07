@@ -9,19 +9,25 @@ export default {
   },
   props: [
     {
+      name: 'v-model',
+      propType: 'string',
+      title: 'v-model',
+      setter: 'ExpressionSetter',
+    },
+    {
+      name: 'width',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'number'],
+      },
+      title: '宽度',
+      setter: false,
+    },
+    {
       name: 'center',
       propType: 'bool',
       title: '内容居中',
       setter: 'BoolSetter',
-    },
-    {
-      name: 'closeIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'func'],
-      },
-      title: 'closeIcon',
-      setter: false,
     },
     {
       name: 'customClass',
@@ -29,12 +35,12 @@ export default {
       title: 'customClass',
       setter: 'StringSetter',
     },
-    {
-      name: 'draggable',
-      propType: 'bool',
-      title: '弹窗可拖拽',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'draggable',
+    //   propType: 'bool',
+    //   title: '弹窗可拖拽',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'fullscreen',
       propType: 'bool',
@@ -114,25 +120,10 @@ export default {
       setter: 'StringSetter',
     },
     {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
-    },
-    {
       name: 'modalClass',
       propType: 'string',
       title: 'modalClass',
       setter: 'StringSetter',
-    },
-    {
-      name: 'width',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: '宽度',
-      setter: false,
     },
     {
       name: 'zIndex',
@@ -141,10 +132,9 @@ export default {
       setter: false,
     },
     {
-      name: 'trapFocus',
-      propType: 'bool',
-      title: 'trapFocus',
-      setter: 'BoolSetter',
+      name: 'footer',
+      title: { label: '底部操作', tip: 'Dialog 按钮操作区的内容' },
+      propType: { type: 'oneOfType', value: ['node'] },
     },
   ],
   configure: {

@@ -23,6 +23,36 @@ const componentMetas: ComponentMeta = {
   NDataTable: {
     title: '表格',
     category: CategoryEnum.data,
+    snippets: [
+      {
+        screenshot: '/images/table-1.png',
+        title: '表格',
+        schema: {
+          componentName: 'NDataTable',
+          props: {
+            data: [
+              { no: 3, title: 'Wonderwall', length: '4:18' },
+              { no: 4, title: "Don't Look Back in Anger", length: '4:48' },
+              { no: 12, title: 'Champagne Supernova', length: '7:27' }
+            ],
+            columns: [{
+              title: 'No',
+              key: 'no'
+            },
+            {
+              title: 'Title',
+              key: 'title'
+            },
+            {
+              title: 'Length',
+              key: 'length'
+            }],
+            bordered: true,
+            size: 'medium',
+          }
+        }
+      }
+    ]
   },
   // ElAffix: {
   //   title: '固钉',
@@ -64,14 +94,39 @@ const componentMetas: ComponentMeta = {
     childrenProp: true,
     snippets: [
       {
-        title: '按钮',
+        title: '主按钮',
         screenshot:
-          'https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png',
+          '/images/button-1.png',
         schema: {
           componentName: 'ElButton',
           props: {
-            children: ['按钮'],
+            children: ['主按钮'],
             size: 'default',
+            type: 'primary'
+          },
+        },
+      },
+      {
+        title: '次按钮',
+        screenshot:
+          '/images/button-2.png',
+        schema: {
+          componentName: 'ElButton',
+          props: {
+            children: ['次按钮'],
+            size: 'default',
+          },
+        },
+      },
+      {
+        title: '危险按钮',
+        screenshot:
+          '/images/button-3.png',
+        schema: {
+          componentName: 'ElButton',
+          props: {
+            children: ['危险按钮'],
+            size: 'danger',
           },
         },
       },
@@ -244,7 +299,21 @@ const componentMetas: ComponentMeta = {
             editable: true,
             clearable: true,
             type: 'date',
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD',
+          },
+        },
+      },
+      {
+        title: '日期区间',
+        screenshot:
+          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/date-picker-range-picker-1.png',
+        schema: {
+          componentName: 'ElDatePicker',
+          props: {
+            editable: true,
+            clearable: true,
+            type: 'daterange',
+            format: 'YYYY-MM-DD',
           },
         },
       },
@@ -265,7 +334,7 @@ const componentMetas: ComponentMeta = {
     isModal: true,
     snippets: [
       {
-        title: '普通型',
+        title: '弹窗',
         screenshot:
           'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/modal-1.png',
         schema: {
@@ -329,6 +398,7 @@ const componentMetas: ComponentMeta = {
           componentName: 'ElForm',
           props: {
             labelWidth: 80,
+            labelPosition: 'right'
           },
           children: [
             {
@@ -378,6 +448,7 @@ const componentMetas: ComponentMeta = {
           componentName: 'ElFormItem',
           props: {
             label: '标签',
+            showMessage: true,
           },
           children: [
             {
@@ -714,10 +785,11 @@ const componentMetas: ComponentMeta = {
   //   title: '滑块',
   //   category: CategoryEnum.form,
   // },
-  // ElSpace: {
-  //   title: '间距',
-  //   category: CategoryEnum.base,
-  // },
+  ElSpace: {
+    title: '间距',
+    category: CategoryEnum.layout,
+    isContainer: true,
+  },
   // ElSteps: {
   //   title: '步骤条',
   //   category: CategoryEnum.nav,
@@ -754,7 +826,7 @@ const componentMetas: ComponentMeta = {
     isContainer: true,
     snippets: [
       {
-        title: '标签面板',
+        title: 'tab面板',
         schema: {
           componentName: 'ElTabPane',
           props: {
@@ -771,7 +843,7 @@ const componentMetas: ComponentMeta = {
     isContainer: true,
     snippets: [
       {
-        title: '普通型',
+        title: 'tab-普通',
         screenshot:
           'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/tabs-1.jpg',
         schema: {
@@ -799,7 +871,7 @@ const componentMetas: ComponentMeta = {
         },
       },
       {
-        title: '卡片型',
+        title: 'tab-卡片',
         screenshot:
           'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/tabs-2.jpg',
         schema: {

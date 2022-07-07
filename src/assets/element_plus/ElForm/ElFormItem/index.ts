@@ -24,63 +24,6 @@ export default {
       setter: false,
     },
     {
-      name: 'prop',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'array'],
-      },
-      title: 'prop',
-      setter: false,
-    },
-    {
-      name: 'required',
-      propType: 'bool',
-      title: '是否必填',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'rules',
-      propType: {
-        type: 'oneOfType',
-        value: ['array'],
-      },
-      title: '验证规则',
-      setter: false,
-    },
-    {
-      name: 'error',
-      propType: 'string',
-      title: 'error',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'validateStatus',
-      propType: 'string',
-      title: 'validateStatus',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'for',
-      propType: 'string',
-      title: 'for',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'inlineMessage',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'bool'],
-      },
-      title: 'inlineMessage',
-      setter: false,
-    },
-    {
-      name: 'showMessage',
-      propType: 'bool',
-      title: 'showMessage',
-      setter: 'BoolSetter',
-    },
-    {
       name: 'size',
       propType: 'string',
       title: '尺寸',
@@ -106,6 +49,48 @@ export default {
         },
         'VariableSetter',
       ],
+    },
+    {
+      name: 'prop',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'array'],
+      },
+      title: {
+        label: 'model键名',
+        tip: 'prop',
+      },
+      setter: 'StringSetter',
+    },
+    {
+      name: 'required',
+      propType: 'bool',
+      title: '是否必填',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'rules',
+      propType: 'object',
+      title: '验证规则',
+      setter: 'JsonSetter',
+    },
+    // {
+    //   name: 'error',
+    //   propType: 'string',
+    //   title: 'error',
+    //   setter: 'StringSetter',
+    // },
+    {
+      name: 'inlineMessage',
+      propType: 'bool',
+      title: '行内显示校验信息',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'showMessage',
+      propType: 'bool',
+      title: '错误信息',
+      setter: 'BoolSetter',
     },
   ],
   configure: {

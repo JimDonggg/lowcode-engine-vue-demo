@@ -9,7 +9,13 @@ export default {
   },
   props: [
     {
-      name: 'children',
+      name: 'v-model',
+      propType: 'string',
+      title: 'v-model',
+      setter: 'ExpressionSetter',
+    },
+    {
+      name: '标签内容',
       propType: {
         type: 'oneOfType',
         value: ['node', 'string'],
@@ -55,25 +61,13 @@ export default {
         type: 'oneOfType',
         value: ['string', 'number', 'bool'],
       },
-      title: '标签',
+      title: '选中的值',
       setter: false,
-    },
-    {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
-    },
-    {
-      name: 'name',
-      propType: 'string',
-      title: 'name',
-      setter: 'StringSetter',
     },
     {
       name: 'border',
       propType: 'bool',
-      title: 'border',
+      title: '边框',
       setter: 'BoolSetter',
     },
   ],

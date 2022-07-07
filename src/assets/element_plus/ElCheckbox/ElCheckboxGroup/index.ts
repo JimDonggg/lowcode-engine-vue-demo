@@ -15,24 +15,6 @@ export default {
       setter: 'ExpressionSetter',
     },
     {
-      name: 'disabled',
-      propType: 'bool',
-      title: '是否禁用',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'min',
-      propType: 'number',
-      title: 'min',
-      setter: false,
-    },
-    {
-      name: 'max',
-      propType: 'number',
-      title: 'max',
-      setter: false,
-    },
-    {
       name: 'size',
       propType: 'string',
       title: '尺寸',
@@ -60,35 +42,39 @@ export default {
       ],
     },
     {
-      name: 'id',
-      propType: 'string',
-      title: 'id',
-      setter: 'StringSetter',
+      name: 'disabled',
+      propType: 'bool',
+      title: '是否禁用',
+      setter: 'BoolSetter',
     },
     {
-      name: 'label',
-      propType: 'string',
-      title: '标签',
-      setter: 'StringSetter',
+      name: 'min',
+      propType: 'number',
+      title: {
+        label: '最小数量',
+        tip: '可被勾选的 checkbox 的最小数量',
+      },
     },
     {
-      name: 'fill',
-      propType: 'string',
-      title: 'fill',
-      setter: 'StringSetter',
+      name: 'max',
+      propType: 'number',
+      title: {
+        label: '最大数量',
+        tip: '可被勾选的 checkbox 的最大数量',
+      },
     },
-    {
-      name: 'textColor',
-      propType: 'string',
-      title: 'textColor',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'tag',
-      propType: 'string',
-      title: 'tag',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'fill',
+    //   propType: 'string',
+    //   title: 'fill',
+    //   setter: 'StringSetter',
+    // },
+    // {
+    //   name: 'textColor',
+    //   propType: 'string',
+    //   title: 'textColor',
+    //   setter: 'StringSetter',
+    // },
   ],
   configure: {
     supports: {

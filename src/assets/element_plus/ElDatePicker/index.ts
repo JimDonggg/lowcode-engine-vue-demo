@@ -9,65 +9,65 @@ export default {
   },
   props: [
     {
-      name: 'id',
-      propType: {
-        type: 'oneOfType',
-        value: ['array', 'string'],
-      },
-      title: 'id',
-      setter: false,
-    },
-    {
-      name: 'name',
-      propType: {
-        type: 'oneOfType',
-        value: ['array', 'string'],
-      },
-      title: 'name',
-      setter: false,
-    },
-    {
-      name: 'popperClass',
+      name: 'v-model',
       propType: 'string',
-      title: 'popperClass',
-      setter: 'StringSetter',
+      title: 'v-model',
+      setter: 'ExpressionSetter',
     },
+    // {
+    //   name: 'popperClass',
+    //   propType: 'string',
+    //   title: 'popperClass',
+    //   setter: 'StringSetter',
+    // },
     {
       name: 'format',
       propType: 'string',
-      title: 'format',
+      title: '显示格式',
       setter: 'StringSetter',
     },
     {
       name: 'valueFormat',
       propType: 'string',
-      title: 'valueFormat',
+      title: '值格式',
       setter: 'StringSetter',
     },
     {
       name: 'type',
       propType: 'string',
-      title: '类型',
+      title: '显示类型',
       setter: [
         {
           componentName: 'SelectSetter',
           props: {
             options: [
               {
-                title: '主要',
-                value: 'primary',
+                title: '年',
+                value: 'year',
               },
               {
-                title: '成功',
-                value: 'success',
+                title: '月',
+                value: 'month',
               },
               {
-                title: '警告',
-                value: 'warning',
+                title: '星期',
+                value: 'week',
               },
               {
-                title: '危险',
-                value: 'danger',
+                title: '天',
+                value: 'date',
+              },
+              {
+                title: '日期时间',
+                value: 'datetime',
+              },
+              {
+                title: '日期范围',
+                value: 'daterange',
+              },
+              {
+                title: '日期时间范围',
+                value: 'datetimerange',
               },
             ],
           },
@@ -81,21 +81,21 @@ export default {
       title: '支持清除',
       setter: 'BoolSetter',
     },
-    {
-      name: 'clearIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string'],
-      },
-      title: 'clearIcon',
-      setter: false,
-    },
-    {
-      name: 'editable',
-      propType: 'bool',
-      title: '标签可增加关闭',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'clearIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string'],
+    //   },
+    //   title: 'clearIcon',
+    //   setter: false,
+    // },
+    // {
+    //   name: 'editable',
+    //   propType: 'bool',
+    //   title: '标签可增加关闭',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'prefixIcon',
       propType: {
@@ -155,12 +155,6 @@ export default {
       propType: 'object',
       title: 'popperOptions',
       setter: false,
-    },
-    {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
     },
     {
       name: 'rangeSeparator',
@@ -278,7 +272,7 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['on0'],
+      events: ['onChange', 'onBlur', 'onFocus', 'onCalendarChange', 'onVisibleChange'],
     },
     component: {
       isContainer: false,

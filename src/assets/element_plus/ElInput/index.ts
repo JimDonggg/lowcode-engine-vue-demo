@@ -9,9 +9,15 @@ export default {
   },
   props: [
     {
-      name: 'id',
+      name: 'v-model',
       propType: 'string',
-      title: 'id',
+      title: 'v-model',
+      setter: 'ExpressionSetter',
+    },
+    {
+      name: 'placeholder',
+      propType: 'string',
+      title: '输入提示',
       setter: 'StringSetter',
     },
     {
@@ -42,16 +48,16 @@ export default {
       ],
     },
     {
+      name: 'maxLength',
+      title: { label: '最大长度', tip: '最大长度' },
+      propType: 'number',
+      setter: 'NumberSetter',
+    },
+    {
       name: 'disabled',
       propType: 'bool',
       title: '是否禁用',
       setter: 'BoolSetter',
-    },
-    {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
     },
     {
       name: 'type',
@@ -63,20 +69,16 @@ export default {
           props: {
             options: [
               {
-                title: '主要',
-                value: 'primary',
+                title: '文本框',
+                value: 'text',
               },
               {
-                title: '成功',
-                value: 'success',
+                title: '密码框',
+                value: 'password',
               },
               {
-                title: '警告',
-                value: 'warning',
-              },
-              {
-                title: '危险',
-                value: 'danger',
+                title: '文本框',
+                value: 'textarea',
               },
             ],
           },
@@ -84,51 +86,18 @@ export default {
         'VariableSetter',
       ],
     },
-    {
-      name: 'resize',
-      propType: 'string',
-      title: 'resize',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'autosize',
-      propType: {
-        type: 'oneOfType',
-        value: ['bool'],
-      },
-      title: 'autosize',
-      setter: false,
-    },
-    {
-      name: 'autocomplete',
-      propType: 'string',
-      title: 'autocomplete',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'formatter',
-      propType: 'func',
-      title: 'formatter',
-      setter: false,
-    },
-    {
-      name: 'parser',
-      propType: 'func',
-      title: 'parser',
-      setter: false,
-    },
-    {
-      name: 'placeholder',
-      propType: 'string',
-      title: '输入提示',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'form',
-      propType: 'string',
-      title: 'form',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'formatter',
+    //   propType: 'func',
+    //   title: 'formatter',
+    //   setter: false,
+    // },
+    // {
+    //   name: 'parser',
+    //   propType: 'func',
+    //   title: 'parser',
+    //   setter: false,
+    // },
     {
       name: 'readonly',
       propType: 'bool',
@@ -153,79 +122,50 @@ export default {
       title: '字数统计',
       setter: 'BoolSetter',
     },
+    // {
+    //   name: 'suffixIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'func'],
+    //   },
+    //   title: 'suffixIcon',
+    //   setter: false,
+    // },
+    // {
+    //   name: 'prefixIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'func'],
+    //   },
+    //   title: 'prefixIcon',
+    //   setter: false,
+    // },
     {
-      name: 'suffixIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'func'],
-      },
-      title: 'suffixIcon',
-      setter: false,
+      name: 'append',
+      title: { label: '前置标签', tip: '前置标签' },
+      propType: { type: 'oneOfType', value: ['node'] },
     },
     {
-      name: 'prefixIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'func'],
-      },
-      title: 'prefixIcon',
-      setter: false,
+      name: 'prepend',
+      title: { label: '后置标签', tip: '后置标签' },
+      propType: { type: 'oneOfType', value: ['node'] },
     },
-    {
-      name: 'containerRole',
-      propType: 'string',
-      title: 'containerRole',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'label',
-      propType: 'string',
-      title: '标签',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'tabindex',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: 'tabindex',
-      setter: false,
-    },
-    {
-      name: 'validateEvent',
-      propType: 'bool',
-      title: 'validateEvent',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'inputStyle',
-      propType: {
-        type: 'oneOfType',
-        value: ['array', 'string'],
-      },
-      title: 'inputStyle',
-      setter: false,
-    },
+    // {
+    //   name: 'prefix',
+    //   title: { label: '前缀', tip: '前缀' },
+    //   propType: { type: 'oneOfType', value: ['string', 'node'] },
+    // },
+    // {
+    //   name: 'suffix',
+    //   title: { label: '后缀', tip: '后缀' },
+    //   propType: { type: 'oneOfType', value: ['string', 'node'] },
+    // },
   ],
   configure: {
     supports: {
       style: true,
       loop: true,
-      events: [
-        'onUpdate:modelvalue',
-        'onInput',
-        'onChange',
-        'onFocus',
-        'onBlur',
-        'onClear',
-        'onMouseleave',
-        'onMouseenter',
-        'onKeydown',
-        'onCompositionstart',
-        'onCompositionupdate',
-        'onCompositionend',
-      ],
+      events: ['onInput', 'onChange', 'onFocus', 'onBlur', 'onClear'],
     },
     component: {
       isContainer: false,

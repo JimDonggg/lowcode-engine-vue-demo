@@ -12,58 +12,13 @@ export default {
       name: 'model',
       propType: 'object',
       title: '数据对象',
-      setter: false,
+      setter: 'ExpressionSetter',
     },
     {
       name: 'rules',
       propType: 'object',
       title: '验证规则',
-      setter: false,
-    },
-    {
-      name: 'labelPosition',
-      propType: 'string',
-      title: '标签位置',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'labelWidth',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: '标签宽度',
-      setter: false,
-    },
-    {
-      name: 'labelSuffix',
-      propType: 'string',
-      title: 'labelSuffix',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'inline',
-      propType: 'bool',
-      title: 'inline',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'inlineMessage',
-      propType: 'bool',
-      title: 'inlineMessage',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'statusIcon',
-      propType: 'bool',
-      title: 'statusIcon',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'showMessage',
-      propType: 'bool',
-      title: 'showMessage',
-      setter: 'BoolSetter',
+      setter: 'JsonSetter',
     },
     {
       name: 'size',
@@ -93,27 +48,82 @@ export default {
       ],
     },
     {
+      name: 'labelPosition',
+      propType: 'string',
+      title: '标签位置',
+      setter: [
+        {
+          componentName: 'RadioGroupSetter',
+          props: {
+            options: [
+              {
+                title: '左',
+                value: 'left',
+              },
+              {
+                title: '右',
+                value: 'right',
+              },
+              {
+                title: '上',
+                value: 'top',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
+    },
+    {
+      name: 'labelWidth',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'number'],
+      },
+      title: '标签宽度',
+      setter: 'StringSetter',
+    },
+    // {
+    //   name: 'labelSuffix',
+    //   propType: 'string',
+    //   title: '标签后缀',
+    //   setter: 'StringSetter',
+    // },
+    {
+      name: 'inline',
+      propType: 'bool',
+      title: '行内表单',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'inlineMessage',
+      propType: 'bool',
+      title: '行内校验信息',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'showMessage',
+      propType: 'bool',
+      title: '显示错误信息',
+      setter: 'BoolSetter',
+    },
+
+    {
       name: 'disabled',
       propType: 'bool',
       title: '是否禁用',
       setter: 'BoolSetter',
     },
-    {
-      name: 'validateOnRuleChange',
-      propType: 'bool',
-      title: 'validateOnRuleChange',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'validateOnRuleChange',
+    //   propType: 'bool',
+    //   title: 'validateOnRuleChange',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'hideRequiredAsterisk',
       propType: 'bool',
-      title: 'hideRequiredAsterisk',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'scrollToError',
-      propType: 'bool',
-      title: 'scrollToError',
+      title: '隐藏必填标记',
       setter: 'BoolSetter',
     },
   ],

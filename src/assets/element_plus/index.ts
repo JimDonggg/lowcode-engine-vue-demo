@@ -22,6 +22,9 @@ import ElTabs from './ElTabs';
 import ElTabPane from './ElTabs/ElTabPane';
 import ElIcon from './ElIcon';
 import ElDialog from './ElDialog';
+import ElRow from './ElRow';
+import ElCol from './ElRow/ElCol';
+import ElSpace from './ElSpace';
 export default main();
 function main() {
   const components = [
@@ -43,6 +46,9 @@ function main() {
     ElTabPane,
     ElIcon,
     ElDialog,
+    ElRow,
+    ElCol,
+    ElSpace,
   ];
   const componentList = generateComponentList(components);
   const assets: AssetsJson = {

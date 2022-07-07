@@ -8,12 +8,12 @@ export default {
     destructuring: true,
   },
   props: [
-    {
-      name: 'tag',
-      propType: 'string',
-      title: 'tag',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'tag',
+    //   propType: 'string',
+    //   title: 'tag',
+    //   setter: 'StringSetter',
+    // },
     {
       name: 'gutter',
       propType: 'number',

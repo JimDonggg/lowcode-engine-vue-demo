@@ -9,87 +9,19 @@ export default {
   },
   props: [
     {
-      name: 'children',
-      propType: {
-        type: 'oneOfType',
-        value: ['node', 'string'],
-      },
-      setter: ['SlotSetter', 'StringSetter', 'VariableSetter'],
-    },
-    {
       name: 'v-model',
       propType: 'string',
       title: 'v-model',
       setter: 'ExpressionSetter',
     },
     {
-      name: 'label',
+      name: 'children',
       propType: {
         type: 'oneOfType',
-        value: ['string', 'bool', 'number'],
+        value: ['node', 'string'],
       },
-      title: '标签',
-      setter: false,
-    },
-    {
-      name: 'indeterminate',
-      propType: 'bool',
-      title: 'indeterminate',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'disabled',
-      propType: 'bool',
-      title: '是否禁用',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'checked',
-      propType: 'bool',
-      title: 'checked',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'name',
-      propType: 'string',
-      title: 'name',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'trueLabel',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: 'trueLabel',
-      setter: false,
-    },
-    {
-      name: 'falseLabel',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: 'falseLabel',
-      setter: false,
-    },
-    {
-      name: 'id',
-      propType: 'string',
-      title: 'id',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'controls',
-      propType: 'string',
-      title: 'controls',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'border',
-      propType: 'bool',
-      title: 'border',
-      setter: 'BoolSetter',
+      title: '标签内容',
+      setter: ['SlotSetter', 'StringSetter', 'VariableSetter'],
     },
     {
       name: 'size',
@@ -119,17 +51,65 @@ export default {
       ],
     },
     {
-      name: 'tabindex',
-      propType: 'any',
-      title: 'tabindex',
+      name: 'label',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'bool', 'number'],
+      },
+      title: {
+        label: '选中状态的值',
+        tip: '只有在checkbox-group或者绑定对象类型为array时有效',
+      },
       setter: false,
+    },
+    // {
+    //   name: 'indeterminate',
+    //   propType: 'bool',
+    //   title: 'indeterminate',
+    //   setter: 'BoolSetter',
+    // },
+    {
+      name: 'disabled',
+      propType: 'bool',
+      title: '是否禁用',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'checked',
+      propType: 'bool',
+      title: 'checked',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'trueLabel',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'number'],
+      },
+      title: '选中时的值',
+      setter: false,
+    },
+    {
+      name: 'falseLabel',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'number'],
+      },
+      title: '未选中时的值',
+      setter: false,
+    },
+    {
+      name: 'border',
+      propType: 'bool',
+      title: '显示边框',
+      setter: 'BoolSetter',
     },
   ],
   configure: {
     supports: {
       style: true,
       loop: true,
-      events: ['onUpdate:modelvalue', 'onChange'],
+      events: ['onChange'],
     },
     component: {
       isContainer: false,

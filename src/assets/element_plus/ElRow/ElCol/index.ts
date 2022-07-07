@@ -8,12 +8,12 @@ export default {
     destructuring: true,
   },
   props: [
-    {
-      name: 'tag',
-      propType: 'string',
-      title: 'tag',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'tag',
+    //   propType: 'string',
+    //   title: 'tag',
+    //   setter: 'StringSetter',
+    // },
     {
       name: 'span',
       propType: 'number',
@@ -24,19 +24,16 @@ export default {
       name: 'offset',
       propType: 'number',
       title: '左侧的间隔格数',
-      setter: false,
     },
     {
       name: 'pull',
       propType: 'number',
       title: '栅格向左移动格数',
-      setter: false,
     },
     {
       name: 'push',
       propType: 'number',
       title: '栅格向右移动格数',
-      setter: false,
     },
     {
       name: 'xs',

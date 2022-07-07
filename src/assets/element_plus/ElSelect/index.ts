@@ -9,18 +9,6 @@ export default {
   },
   props: [
     {
-      name: 'name',
-      propType: 'string',
-      title: 'name',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'id',
-      propType: 'string',
-      title: 'id',
-      setter: 'StringSetter',
-    },
-    {
       name: 'v-model',
       propType: 'string',
       title: 'v-model',

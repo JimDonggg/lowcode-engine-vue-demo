@@ -14,6 +14,7 @@ export default {
         type: 'oneOfType',
         value: ['node', 'string'],
       },
+      title: '内容',
       setter: ['SlotSetter', 'StringSetter', 'VariableSetter'],
     },
     {
@@ -59,6 +60,10 @@ export default {
           props: {
             options: [
               {
+                title: '默认',
+                value: '',
+              },
+              {
                 title: '主要',
                 value: 'primary',
               },
@@ -74,102 +79,88 @@ export default {
                 title: '危险',
                 value: 'danger',
               },
+              {
+                title: '信息',
+                value: 'info',
+              },
             ],
           },
         },
         'VariableSetter',
       ],
     },
-    {
-      name: 'icon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'func'],
-      },
-      title: '图标组件',
-      setter: false,
-    },
-    {
-      name: 'nativeType',
-      propType: 'string',
-      title: '原生 type 属性',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'icon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'func'],
+    //   },
+    //   title: '图标组件',
+    //   setter: false,
+    // },
     {
       name: 'loading',
       propType: 'bool',
       title: '显示加载状态',
       setter: 'BoolSetter',
     },
-    {
-      name: 'loadingIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'func'],
-      },
-      title: '自定义加载中状态图标',
-      setter: false,
-    },
+    // {
+    //   name: 'loadingIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'func'],
+    //   },
+    //   title: '自定义加载中状态图标',
+    //   setter: false,
+    // },
     {
       name: 'plain',
       propType: 'bool',
-      title: '是否为朴素按钮',
+      title: '朴素按钮',
       setter: 'BoolSetter',
     },
     {
       name: 'text',
       propType: 'bool',
-      title: '是否为文字按钮',
+      title: '文字按钮',
       setter: 'BoolSetter',
     },
     {
       name: 'link',
       propType: 'bool',
-      title: '是否为链接按钮',
+      title: '链接按钮',
       setter: 'BoolSetter',
     },
-    {
-      name: 'bg',
-      propType: 'bool',
-      title: '是否显示文字按钮背景颜色',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'autofocus',
-      propType: 'bool',
-      title: '默认选中',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'bg',
+    //   propType: 'bool',
+    //   title: '是否显示文字按钮背景颜色',
+    //   setter: 'BoolSetter',
+    // },
+    // {
+    //   name: 'autofocus',
+    //   propType: 'bool',
+    //   title: '默认选中',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'round',
       propType: 'bool',
-      title: '是否为圆角按钮',
+      title: '圆角按钮',
       setter: 'BoolSetter',
     },
     {
       name: 'circle',
       propType: 'bool',
-      title: '是否为圆形按钮',
+      title: '圆形按钮',
       setter: 'BoolSetter',
     },
-    {
-      name: 'color',
-      propType: 'string',
-      title: 'color',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'dark',
-      propType: 'bool',
-      title: 'dark',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'autoInsertSpace',
-      propType: 'bool',
-      title: '自动在两个中文字符之间插入空格',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'autoInsertSpace',
+    //   propType: 'bool',
+    //   title: '自动在两个中文字符之间插入空格',
+    //   setter: 'BoolSetter',
+    // },
   ],
   configure: {
     supports: {
