@@ -168,6 +168,15 @@ export default {
                     ],
                   },
                   {
+                    name: 'ellipsis',
+                    title: {
+                      label: '文本溢出',
+                      tip: '文本溢出是否显示为...',
+                    },
+                    propType: 'bool',
+                    setter: 'BoolSetter',
+                  },
+                  {
                     name: 'className',
                     title: {
                       label: '列样式类名',

@@ -190,10 +190,58 @@ const componentMetas: ComponentMeta = {
   //   title: '走马灯项',
   //   category: CategoryEnum.data,
   // },
-  // ElCascader: {
-  //   title: '级联选择器',
-  //   category: CategoryEnum.form,
-  // },
+  ElCascader: {
+    title: '级联选择器',
+    category: CategoryEnum.form,
+    snippets: [
+      {
+        title: '级联选择',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/cascader-1.png',
+        schema: {
+          componentName: 'ElCascader',
+          props: {
+            options: [
+              {
+                value: 'zhejiang',
+                label: 'Zhejiang',
+                children: [
+                  {
+                    value: 'hangzhou',
+                    label: 'Hangzhou',
+                    children: [
+                      {
+                        value: 'xihu',
+                        label: 'West Lake',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                value: 'jiangsu',
+                label: 'Jiangsu',
+                children: [
+                  {
+                    value: 'nanjing',
+                    label: 'Nanjing',
+                    children: [
+                      {
+                        value: 'zhonghuamen',
+                        label: 'Zhong Hua Men',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+            placeholder: '请选择',
+            separator: '/',
+            tagType: 'info'
+          },
+        },
+      },
+    ]
+  },
   ElCheckbox: {
     title: '多选框',
     category: CategoryEnum.form,
@@ -397,7 +445,7 @@ const componentMetas: ComponentMeta = {
         schema: {
           componentName: 'ElForm',
           props: {
-            labelWidth: 80,
+            labelWidth: '120',
             labelPosition: 'right'
           },
           children: [
@@ -426,6 +474,96 @@ const componentMetas: ComponentMeta = {
                   props: {
                     type: 'password',
                     placeholder: '请输入密码',
+                  },
+                },
+              ],
+            },
+            {
+              componentName: 'ElFormItem',
+              props: {
+                label: '',
+              },
+              children: [
+                {
+                  componentName: 'ElButton',
+                  props: {
+                    children: ['确定'],
+                    size: 'default',
+                    type: 'primary'
+                  },
+                },
+                {
+                  componentName: 'ElButton',
+                  props: {
+                    children: ['取消'],
+                    size: 'default',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        screenshot:
+          'https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png',
+        title: '列表搜索框',
+        schema: {
+          componentName: 'ElForm',
+          props: {
+            labelWidth: '120',
+            labelPosition: 'right',
+            inline: true,
+          },
+          children: [
+            {
+              componentName: 'ElFormItem',
+              props: {
+                label: '用户名',
+              },
+              children: [
+                {
+                  componentName: 'ElInput',
+                  props: {
+                    placeholder: '请输入用户名',
+                  },
+                },
+              ],
+            },
+            {
+              componentName: 'ElFormItem',
+              props: {
+                label: '密码',
+              },
+              children: [
+                {
+                  componentName: 'ElInput',
+                  props: {
+                    type: 'password',
+                    placeholder: '请输入密码',
+                  },
+                },
+              ],
+            },
+            {
+              componentName: 'ElFormItem',
+              props: {
+                label: '',
+              },
+              children: [
+                {
+                  componentName: 'ElButton',
+                  props: {
+                    children: ['搜索'],
+                    size: 'default',
+                    type: 'primary'
+                  },
+                },
+                {
+                  componentName: 'ElButton',
+                  props: {
+                    children: ['重置'],
+                    size: 'default',
                   },
                 },
               ],

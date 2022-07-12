@@ -24,7 +24,8 @@ import ElIcon from './ElIcon';
 import ElDialog from './ElDialog';
 import ElRow from './ElRow';
 import ElCol from './ElRow/ElCol';
-import ElSpace from './ElSpace';
+import ElCascader from './ElCascader';
+// import ElSpace from './ElSpace';
 export default main();
 function main() {
   const components = [
@@ -48,7 +49,8 @@ function main() {
     ElDialog,
     ElRow,
     ElCol,
-    ElSpace,
+    ElCascader,
+    // ElSpace,
   ];
   const componentList = generateComponentList(components);
   const assets: AssetsJson = {
@@ -76,7 +78,6 @@ function main() {
     components,
     componentList,
   };
-  console.log('assets', assets);
   return assets;
 }
 
