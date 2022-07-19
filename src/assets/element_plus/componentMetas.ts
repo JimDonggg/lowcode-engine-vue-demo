@@ -54,6 +54,45 @@ const componentMetas: ComponentMeta = {
       }
     ]
   },
+  NH2: {
+    title: '二级标题',
+    category: CategoryEnum.base,
+    snippets: [{
+      title: '二级标题',
+      schema: {
+        componentName: 'NH2',
+        props: {
+          children: ['文本'],
+        },
+      },
+    },]
+  },
+  NH3: {
+    title: '三级标题',
+    category: CategoryEnum.base,
+    snippets: [{
+      title: '三级标题',
+      schema: {
+        componentName: 'NH3',
+        props: {
+          children: ['文本'],
+        },
+      },
+    },]
+  },
+  NText: {
+    title: '文本',
+    category: CategoryEnum.base,
+    snippets: [{
+      title: '文本',
+      schema: {
+        componentName: 'NText',
+        props: {
+          children: ['文本'],
+        },
+      },
+    },]
+  },
   // ElAffix: {
   //   title: '固钉',
   //   category: CategoryEnum.feedback,
@@ -94,26 +133,26 @@ const componentMetas: ComponentMeta = {
     childrenProp: true,
     snippets: [
       {
-        title: '主按钮',
+        title: '主要按钮',
         screenshot:
           '/images/button-1.png',
         schema: {
           componentName: 'ElButton',
           props: {
-            children: ['主按钮'],
+            children: ['主要按钮'],
             size: 'default',
             type: 'primary'
           },
         },
       },
       {
-        title: '次按钮',
+        title: '次要按钮',
         screenshot:
           '/images/button-2.png',
         schema: {
           componentName: 'ElButton',
           props: {
-            children: ['次按钮'],
+            children: ['次要按钮'],
             size: 'default',
           },
         },
@@ -139,6 +178,8 @@ const componentMetas: ComponentMeta = {
     snippets: [
       {
         title: '按钮组',
+        screenshot:
+          '/images/button-group.png',
         schema: {
           componentName: 'ElButtonGroup',
           children: [
@@ -146,6 +187,7 @@ const componentMetas: ComponentMeta = {
               componentName: 'ElButton',
               props: {
                 children: ['按钮1'],
+                type: 'primary'
               },
             },
             {
@@ -171,7 +213,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '卡片',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/card-1.png',
+          '/images/card.png',
         schema: {
           componentName: 'ElCard',
           props: {
@@ -196,7 +238,7 @@ const componentMetas: ComponentMeta = {
     snippets: [
       {
         title: '级联选择',
-        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/cascader-1.png',
+        screenshot: '/images/category.png',
         schema: {
           componentName: 'ElCascader',
           props: {
@@ -250,12 +292,14 @@ const componentMetas: ComponentMeta = {
       {
         title: '多选框',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/checkbox-1.png',
+          '/images/checkbox.png',
         schema: {
           componentName: 'ElCheckbox',
           props: {
             children: ['多选框'],
             label: 'value1',
+            trueLabel: '已选中',
+            falseLabel: '未选中',
           },
         },
       },
@@ -274,9 +318,12 @@ const componentMetas: ComponentMeta = {
       {
         title: '多选框组',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/checkbox-group-1.png',
+        '/images/checkbox-group.png',
         schema: {
           componentName: 'ElCheckboxGroup',
+          props: {
+            max: 2,
+          },
           children: [
             {
               componentName: 'ElCheckbox',
@@ -340,7 +387,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '日期选择器',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/date-picker-1.png',
+          '/images/datetime.png',
         schema: {
           componentName: 'ElDatePicker',
           props: {
@@ -354,7 +401,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '日期区间',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/date-picker-range-picker-1.png',
+          '/images/datetime-range.png',
         schema: {
           componentName: 'ElDatePicker',
           props: {
@@ -384,16 +431,40 @@ const componentMetas: ComponentMeta = {
       {
         title: '弹窗',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/modal-1.png',
+          '/images/dialog.png',
         schema: {
           componentName: 'ElDialog',
           props: {
+            'v-model': {
+              "type": "JSExpression",
+              "value": "true"
+            },
             title: '标题',
             top: '15vh',
             lockScroll: true,
             closeOnClickModal: true,
             closeOnPressEscape: true,
             showClose: true,
+            footer: {
+              "type": "JSSlot",
+              "value": [
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "取消",
+                    "size": "default",
+                  },
+                },
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "确定",
+                    "size": "default",
+                    "type": "primary"
+                  },
+                }
+              ]
+            }
           },
           children: [],
         },
@@ -404,10 +475,86 @@ const componentMetas: ComponentMeta = {
   //   title: '分割线',
   //   category: CategoryEnum.base,
   // },
-  // ElDrawer: {
-  //   title: '抽屉',
-  //   category: CategoryEnum.feedback,
-  // },
+  ElDrawer: {
+    title: '抽屉',
+    category: CategoryEnum.feedback,
+    isContainer: true,
+    isModal: true,
+    snippets: [
+      {
+        title: '侧边抽屉',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/drawer-1.png',
+        schema: {
+          componentName: 'ElDrawer',
+          props: {
+            title: '侧边抽屉',
+            'v-model': {
+              "type": "JSExpression",
+              "value": "true"
+            },
+            direction: 'rtl',
+            destroyOnClose: true,
+            footer: {
+              "type": "JSSlot",
+              "value": [
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "取消",
+                    "size": "default",
+                  },
+                },
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "确定",
+                    "size": "default",
+                    "type": "primary"
+                  },
+                }
+              ]
+            }
+          },
+        },
+      },
+      {
+        title: '底部抽屉',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/drawer-2.png',
+        schema: {
+          componentName: 'ElDrawer',
+          props: {
+            title: '底部抽屉',
+            'v-model': {
+              "type": "JSExpression",
+              "value": "true"
+            },
+            direction: 'btt',
+            destroyOnClose: true,
+            footer: {
+              "type": "JSSlot",
+              "value": [
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "取消",
+                    "size": "default",
+                  },
+                },
+                {
+                  "componentName": "ElButton",
+                  "props": {
+                    "children": "确定",
+                    "size": "default",
+                    "type": "primary"
+                  },
+                }
+              ]
+            }
+          },
+        },
+      },
+    ]
+  },
   // ElCollection: {
   //   title: '',
   //   category: '',
@@ -440,7 +587,7 @@ const componentMetas: ComponentMeta = {
     snippets: [
       {
         screenshot:
-          'https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png',
+          'images/form.png',
         title: '表单容器',
         schema: {
           componentName: 'ElForm',
@@ -458,7 +605,7 @@ const componentMetas: ComponentMeta = {
                 {
                   componentName: 'ElInput',
                   props: {
-                    placeholder: '请输入用户名',
+                    placeholder: '请输入',
                   },
                 },
               ],
@@ -473,7 +620,7 @@ const componentMetas: ComponentMeta = {
                   componentName: 'ElInput',
                   props: {
                     type: 'password',
-                    placeholder: '请输入密码',
+                    placeholder: '请输入',
                   },
                 },
               ],
@@ -506,7 +653,7 @@ const componentMetas: ComponentMeta = {
       },
       {
         screenshot:
-          'https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png',
+          '/images/form-search.png',
         title: '列表搜索框',
         schema: {
           componentName: 'ElForm',
@@ -519,13 +666,13 @@ const componentMetas: ComponentMeta = {
             {
               componentName: 'ElFormItem',
               props: {
-                label: '用户名',
+                label: '选项1',
               },
               children: [
                 {
                   componentName: 'ElInput',
                   props: {
-                    placeholder: '请输入用户名',
+                    placeholder: '请输入',
                   },
                 },
               ],
@@ -533,14 +680,13 @@ const componentMetas: ComponentMeta = {
             {
               componentName: 'ElFormItem',
               props: {
-                label: '密码',
+                label: '选项2',
               },
               children: [
                 {
                   componentName: 'ElInput',
                   props: {
-                    type: 'password',
-                    placeholder: '请输入密码',
+                    placeholder: '请输入',
                   },
                 },
               ],
@@ -591,6 +737,9 @@ const componentMetas: ComponentMeta = {
           children: [
             {
               componentName: 'ElInput',
+              props: {
+                placeholder: '请输入',
+              }
             },
           ],
         },
@@ -600,15 +749,61 @@ const componentMetas: ComponentMeta = {
   ElIcon: {
     title: '图标',
     category: CategoryEnum.base,
+    isContainer: true,
+    snippets: [
+      {
+        title: '图标',
+        screenshot: '/images/icon.png',
+        schema: {
+          componentName: 'ElIcon',
+          props: {
+            size: 20,
+          },
+          children: [{
+            componentName: 'Edit',
+            props: {
+              width: '20'
+            }
+          }]
+        },
+      },
+    ]
   },
-  // ElImage: {
-  //   title: '图片',
-  //   category: CategoryEnum.data,
-  // },
-  // ElImageViewer: {
-  //   title: '图片预览',
-  //   category: CategoryEnum.data,
-  // },
+  ElImage: {
+    title: '图片',
+    category: CategoryEnum.data,
+    snippets:[
+      {
+        title: '图片',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/image-1.png',
+        schema: {
+          componentName: 'ElImage',
+          props: {
+            src: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+            alt: '图片'
+          },
+        },
+      },
+    ]
+  },
+  ElImageViewer: {
+    title: '图片预览',
+    category: CategoryEnum.data,
+    snippets: [{
+      title: '图片预览',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/image-1.png',
+        schema: {
+          componentName: 'ElImageViewer',
+          props: {
+            urlList: [
+            'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+            'https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg',
+            'https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg',
+            'https://fuss10.elemecdn.com/9/bb/e27858e973f5d7d3904835f46abbdjpeg.jpeg',],
+          },
+        },
+    }]
+  },
   ElInput: {
     title: '输入框',
     category: CategoryEnum.form,
@@ -616,7 +811,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '输入框',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/input-1.png',
+          '/images/input.png',
         schema: {
           componentName: 'ElInput',
           props: {
@@ -626,15 +821,38 @@ const componentMetas: ComponentMeta = {
       },
     ],
   },
-  // ElInputNumber: {
-  //   title: '数字输入框',
-  //   category: CategoryEnum.form,
-  // },
-  // ElLink: {
-  //   title: '链接',
-  //   category: CategoryEnum.base,
-  //   childrenProp: true,
-  // },
+  ElInputNumber: {
+    title: '数字输入框',
+    category: CategoryEnum.form,
+    snippets: [
+      {
+        title: '数字输入框',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/input-number-1.png',
+        schema: {
+          componentName: 'ElInputNumber',
+          props: {
+            placeholder: '请输入',
+          },
+        },
+      },
+    ]
+  },
+  ElLink: {
+    title: '链接',
+    category: CategoryEnum.base,
+    childrenProp: true,
+    snippets: [
+      {
+        title: '链接',
+        schema: {
+          componentName: 'ElLink',
+          props: {
+            children: ['链接'],
+          },
+        },
+      },
+    ]
+  },
   // ElMenu: {
   //   title: '',
   //   category: '',
@@ -695,7 +913,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '单选框',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/radio-1.png',
+          '/images/radio.png',
         schema: {
           componentName: 'ElRadio',
           props: {
@@ -719,7 +937,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '单选按钮组',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/radio-group-1.png',
+          '/images/radio-group.png',
         schema: {
           componentName: 'ElRadioGroup',
           children: [
@@ -758,7 +976,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '两栏',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/1-1.png',
+          '/images/row-2.png',
         schema: {
           componentName: 'ElRow',
           props: {},
@@ -781,7 +999,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '三栏',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/1-1-1.png',
+          '/images/row-3.png',
         schema: {
           componentName: 'ElRow',
           props: {},
@@ -810,7 +1028,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '四栏',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/1-1-1-1.png',
+          '/images/row-4.png',
         schema: {
           componentName: 'ElRow',
           props: {},
@@ -848,7 +1066,19 @@ const componentMetas: ComponentMeta = {
     title: '列',
     category: CategoryEnum.layout,
     isContainer: true,
-    snippets: [],
+    snippets: [
+      {
+        title: '列',
+        screenshot:
+          '/images/col.png',
+        schema: {
+          componentName: 'ElCol',
+          props: {
+            span: 6,
+          },
+        },
+      },
+    ],
   },
   // ElScrollbar: {
   //   title: '',
@@ -866,7 +1096,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '选择框',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/select-1.png',
+          '/images/select.png',
         schema: {
           componentName: 'ElSelect',
           children: [
@@ -896,7 +1126,7 @@ const componentMetas: ComponentMeta = {
       {
         title: '选择框项',
         screenshot:
-          'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/select-1.png',
+          '/images/select-option.png',
         schema: {
           componentName: 'ElOption',
           props: {
@@ -936,10 +1166,21 @@ const componentMetas: ComponentMeta = {
   //   title: '',
   //   category: '',
   // },
-  // ElSwitch: {
-  //   title: '开关',
-  //   category: CategoryEnum.form,
-  // },
+  ElSwitch: {
+    title: '开关',
+    category: CategoryEnum.form,
+    snippets: [
+      {
+        title: '开关',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/switch-1.png',
+        schema: {
+          componentName: 'ElSwitch',
+          props: {
+          },
+        },
+      },
+    ]
+  },
   // ElTable: {
   //   title: '表格',
   //   category: CategoryEnum.data,
@@ -965,6 +1206,7 @@ const componentMetas: ComponentMeta = {
     snippets: [
       {
         title: 'tab面板',
+        screenshot: '/images/tab-pane.png',
         schema: {
           componentName: 'ElTabPane',
           props: {
@@ -1037,10 +1279,22 @@ const componentMetas: ComponentMeta = {
       },
     ],
   },
-  // ElTag: {
-  //   title: '标签',
-  //   category: CategoryEnum.data,
-  // },
+  ElTag: {
+    title: '标签',
+    category: CategoryEnum.data,
+    snippets: [
+      {
+        title: '标签',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/tag-1.png',
+        schema: {
+          componentName: 'ElTag',
+          props: {
+            children: ['标签'],
+          },
+        },
+      },
+    ]
+  },
   // ElTimePicker: {
   //   title: '时间选择器',
   //   category: CategoryEnum.form,
@@ -1057,10 +1311,31 @@ const componentMetas: ComponentMeta = {
   //   title: '时间线项',
   //   category: CategoryEnum.data,
   // },
-  // ElTooltip: {
-  //   title: '文字提示',
-  //   category: CategoryEnum.feedback,
-  // },
+  ElTooltip: {
+    title: '文字提示',
+    category: CategoryEnum.feedback,
+    snippets: [
+      {
+        title: '文字提示',
+        screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/tooltip-1.jpg',
+        schema: {
+          componentName: 'ElTooltip',
+          props: {
+            content: '提示内容',
+            popperClass: 'el-tooltip'
+          },
+          children: [{
+            componentName: 'ElButton',
+            props: {
+              children: ['按钮'],
+              size: 'default',
+              type: 'primary'
+            }
+          }]
+        },
+      },
+    ]
+  },
   // ElTransfer: {
   //   title: '穿梭框',
   //   category: CategoryEnum.form,
@@ -1077,10 +1352,26 @@ const componentMetas: ComponentMeta = {
   //   title: '虚拟化树形控件',
   //   category: CategoryEnum.data,
   // },
-  // ElUpload: {
-  //   title: '文件上传',
-  //   category: CategoryEnum.form,
-  // },
+  ElUpload: {
+    title: '文件上传',
+    category: CategoryEnum.form,
+    snippets: [
+      {
+        title: '上传',
+        screenshot: '/images/upload.png',
+        schema: {
+          componentName: 'ElUpload',
+          props: {},
+          children: [{
+            componentName: 'ElButton',
+            props: {
+              children: ['上传'],
+            },
+          }],
+        },
+      },
+    ]
+  },
   // ElInfiniteScroll: {
   //   title: '',
   //   category: '',

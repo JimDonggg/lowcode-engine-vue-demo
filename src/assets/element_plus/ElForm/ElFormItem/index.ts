@@ -21,7 +21,6 @@ export default {
         value: ['string', 'number'],
       },
       title: '标签宽度',
-      setter: false,
     },
     {
       name: 'size',
@@ -58,7 +57,7 @@ export default {
       },
       title: {
         label: 'model键名',
-        tip: 'prop',
+        tip: 'prop | 表单验证必填',
       },
       setter: 'StringSetter',
     },
@@ -97,7 +96,7 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: [],
+      events: ['onResetField', 'onClearValidate'],
     },
     component: {
       isContainer: true,

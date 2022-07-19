@@ -15,17 +15,46 @@ export default {
       setter: 'ExpressionSetter',
     },
     {
-      name: 'autocomplete',
+      name: 'placeholder',
       propType: 'string',
-      title: 'autocomplete',
-      setter: 'StringSetter',
+      title: '输入提示',
     },
     {
-      name: 'automaticDropdown',
+      name: 'loading',
       propType: 'bool',
-      title: 'automaticDropdown',
+      title: '加载状态',
+    },
+    {
+      name: 'disabled',
+      propType: 'bool',
+      title: '是否禁用',
       setter: 'BoolSetter',
     },
+    {
+      name: 'multiple',
+      propType: 'bool',
+      title: '支持多选',
+    },
+    {
+      name: 'multipleLimit',
+      propType: 'number',
+      title: {
+        label: '最多可选数',
+        tip: '多选模式可用， 为 0 则不限制',
+      },
+    },
+    // {
+    //   name: 'autocomplete',
+    //   propType: 'string',
+    //   title: 'autocomplete',
+    //   setter: 'StringSetter',
+    // },
+    // {
+    //   name: 'automaticDropdown',
+    //   propType: 'bool',
+    //   title: 'automaticDropdown',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'size',
       propType: 'string',
@@ -56,14 +85,26 @@ export default {
     {
       name: 'effect',
       propType: 'string',
-      title: 'effect',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'disabled',
-      propType: 'bool',
-      title: '是否禁用',
-      setter: 'BoolSetter',
+      title: '主题',
+      setter: [
+        {
+          componentName: 'RadioGroupSetter',
+          props: {
+            options: [
+              {
+                title: '明亮',
+                value: 'light',
+              },
+              {
+                title: '暗黑',
+                value: 'dark',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
+      default: 'light',
     },
     {
       name: 'clearable',
@@ -74,159 +115,137 @@ export default {
     {
       name: 'filterable',
       propType: 'bool',
-      title: 'filterable',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'allowCreate',
-      propType: 'bool',
-      title: 'allowCreate',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'loading',
-      propType: 'bool',
-      title: '显示加载状态',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'popperClass',
-      propType: 'string',
-      title: 'popperClass',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'remote',
-      propType: 'bool',
-      title: 'remote',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'loadingText',
-      propType: 'string',
-      title: 'loadingText',
-      setter: 'StringSetter',
+      title: '支持筛选',
     },
     {
       name: 'noMatchText',
       propType: 'string',
-      title: 'noMatchText',
-      setter: 'StringSetter',
+      title: '搜索缺省文本',
+    },
+    {
+      name: 'allowCreate',
+      propType: 'bool',
+      title: {
+        label: '允许创建新条目',
+        tip: '只有当 filterable 设置为 true 时才会生效',
+      },
+    },
+    {
+      name: 'popperClass',
+      propType: 'string',
+      title: {
+        label: '下拉框的className',
+        tip: '用于修改样式',
+      },
+    },
+    {
+      name: 'loadingText',
+      propType: 'string',
+      title: 'loading文本',
     },
     {
       name: 'noDataText',
       propType: 'string',
-      title: 'noDataText',
-      setter: 'StringSetter',
+      title: '无选项缺省文本',
+    },
+    {
+      name: 'remote',
+      propType: 'bool',
+      title: '远程加载',
     },
     {
       name: 'remoteMethod',
       propType: 'func',
-      title: 'remoteMethod',
-      setter: false,
+      title: '远程搜索方法',
     },
     {
       name: 'filterMethod',
       propType: 'func',
-      title: 'filterMethod',
-      setter: false,
+      title: '自定义筛选方法',
     },
-    {
-      name: 'multiple',
-      propType: 'bool',
-      title: 'multiple',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'multipleLimit',
-      propType: 'number',
-      title: 'multipleLimit',
-      setter: false,
-    },
-    {
-      name: 'placeholder',
-      propType: 'string',
-      title: '输入提示',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'defaultFirstOption',
-      propType: 'bool',
-      title: 'defaultFirstOption',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'reserveKeyword',
-      propType: 'bool',
-      title: 'reserveKeyword',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'defaultFirstOption',
+    //   propType: 'bool',
+    //   title: 'defaultFirstOption',
+    //   setter: 'BoolSetter',
+    // },
+    // {
+    //   name: 'reserveKeyword',
+    //   propType: 'bool',
+    //   title: 'reserveKeyword',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'valueKey',
       propType: 'string',
-      title: 'valueKey',
-      setter: 'StringSetter',
+      title: {
+        label: '作为 value 唯一标识的键名',
+        tip: '绑定值为对象类型时必填',
+      },
     },
-    {
-      name: 'collapseTags',
-      propType: 'bool',
-      title: 'collapseTags',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'collapseTagsTooltip',
-      propType: 'bool',
-      title: 'collapseTagsTooltip',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'collapseTags',
+    //   propType: 'bool',
+    //   title: 'collapseTags',
+    //   setter: 'BoolSetter',
+    // },
+    // {
+    //   name: 'collapseTagsTooltip',
+    //   propType: 'bool',
+    //   title: 'collapseTagsTooltip',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'teleported',
       propType: 'bool',
-      title: 'teleported',
-      setter: 'BoolSetter',
+      title: '挂载至body',
+      setter: true,
     },
-    {
-      name: 'persistent',
-      propType: 'bool',
-      title: 'persistent',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'clearIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string'],
-      },
-      title: 'clearIcon',
-      setter: false,
-    },
+    // {
+    //   name: 'persistent',
+    //   propType: 'bool',
+    //   title: 'persistent',
+    // },
+    // {
+    //   name: 'clearIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string'],
+    //   },
+    //   title: 'clearIcon',
+    // },
     {
       name: 'fitInputWidth',
       propType: 'bool',
-      title: 'fitInputWidth',
-      setter: 'BoolSetter',
+      title: '下拉框的宽度与输入框相同',
     },
-    {
-      name: 'suffixIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string'],
-      },
-      title: 'suffixIcon',
-      setter: false,
-    },
-    {
-      name: 'tagType',
-      propType: 'string',
-      title: 'tagType',
-      setter: 'StringSetter',
-    },
+    // {
+    //   name: 'suffixIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string'],
+    //   },
+    //   title: 'suffixIcon',
+    //   setter: false,
+    // },
+    // {
+    //   name: 'tagType',
+    //   propType: 'string',
+    //   title: 'tagType',
+    // },
   ],
   configure: {
     supports: {
       style: true,
       loop: true,
-      events: ['on0', 'on1', 'on2', 'on3', 'on4', 'on5', 'on6'],
+      events: [
+        'onChange',
+        'onClear',
+        'onBlur',
+        'onFocus',
+        'onVisibleChange',
+        'onRemoveTag',
+      ],
     },
     component: {
       isContainer: true,

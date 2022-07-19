@@ -3,6 +3,7 @@ import { buildComponents } from '@knxcloud/lowcode-utils';
 import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
 import { defineComponent, onMounted, reactive, h, createApp } from 'vue';
 import { ConfigProvider } from './config-provider';
+import tools from '../utils/tools';
 
 config.setConfigProvider(ConfigProvider);
 
@@ -47,4 +48,5 @@ const Preview = defineComponent(() => {
 });
 
 const app = createApp(Preview);
+tools(app);
 app.mount('#lce-container');

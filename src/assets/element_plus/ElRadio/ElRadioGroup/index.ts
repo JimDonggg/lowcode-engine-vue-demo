@@ -9,10 +9,10 @@ export default {
   },
   props: [
     {
-      name: 'id',
+      name: 'v-model',
       propType: 'string',
-      title: 'id',
-      setter: 'StringSetter',
+      title: 'v-model',
+      setter: 'ExpressionSetter',
     },
     {
       name: 'size',
@@ -48,41 +48,29 @@ export default {
       setter: 'BoolSetter',
     },
     {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
-    },
-    {
       name: 'fill',
       propType: 'string',
-      title: 'fill',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'label',
-      propType: 'string',
-      title: '标签',
-      setter: 'StringSetter',
+      title: {
+        label: '填充色和边框色',
+        tip: '按钮形式的 Radio 激活时的填充色和边框色',
+      },
+      setter: 'ColorSetter',
     },
     {
       name: 'textColor',
       propType: 'string',
-      title: 'textColor',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'name',
-      propType: 'string',
-      title: 'name',
-      setter: 'StringSetter',
+      title: {
+        label: '文本颜色',
+        tip: '按钮形式的 Radio 激活时的文本颜色',
+      },
+      setter: 'ColorSetter',
     },
   ],
   configure: {
     supports: {
       style: true,
       loop: true,
-      events: ['onUpdate:modelvalue', 'onChange'],
+      events: ['onChange'],
     },
     component: {
       isContainer: true,

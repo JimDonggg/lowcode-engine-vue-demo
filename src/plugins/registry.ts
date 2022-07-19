@@ -1,6 +1,7 @@
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
 import { Logo } from '../components/logo/logo';
+// import PagesPane from './pages';
 
 const builtinPluginRegistry = (ctx: ILowCodePluginContext) => {
   return {
@@ -38,6 +39,20 @@ const builtinPluginRegistry = (ctx: ILowCodePluginContext) => {
       project.onSimulatorRendererReady(() => {
         componentsPane.enable();
       });
+
+      // skeleton.add({
+      //   index: -1,
+      //   area: 'leftArea',
+      //   type: 'PanelDock',
+      //   name: 'pagesPane',
+      //   content: PagesPane,
+      //   contentProps: {},
+      //   props: {
+      //     align: 'top',
+      //     icon: 'kaiwenjianjia',
+      //     description: '页面管理',
+      //   },
+      // });
     },
   };
 };

@@ -23,14 +23,70 @@ export default {
     {
       name: 'justify',
       propType: 'string',
-      title: 'flex 水平排列',
-      setter: 'StringSetter',
+      title: '水平排列',
+      setter: [
+        {
+          componentName: 'SelectSetter',
+          props: {
+            options: [
+              {
+                title: '左对齐',
+                value: 'start',
+              },
+              {
+                title: '右对齐',
+                value: 'end',
+              },
+              {
+                title: '居中',
+                value: 'center',
+              },
+              {
+                title: '间隔相等',
+                value: 'space-around',
+              },
+              {
+                title: '两端对齐',
+                value: 'space-between',
+              },
+              // {
+              //   title: '间隔相等',
+              //   value: 'space-evenly',
+              // },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
+      default: 'start',
     },
     {
       name: 'align',
       propType: 'string',
-      title: 'flex 垂直排列',
-      setter: 'StringSetter',
+      title: '垂直排列',
+      setter: [
+        {
+          componentName: 'SelectSetter',
+          props: {
+            options: [
+              {
+                title: '上对齐',
+                value: 'top',
+              },
+              {
+                title: '居中',
+                value: 'middle',
+              },
+              {
+                title: '下对齐',
+                value: 'bottom',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
+      default: 'top',
     },
   ],
   configure: {

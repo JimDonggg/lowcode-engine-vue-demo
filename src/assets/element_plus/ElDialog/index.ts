@@ -15,6 +15,12 @@ export default {
       setter: 'ExpressionSetter',
     },
     {
+      name: 'title',
+      propType: 'string',
+      title: '标题',
+      setter: 'StringSetter',
+    },
+    {
       name: 'width',
       propType: {
         type: 'oneOfType',
@@ -24,15 +30,37 @@ export default {
       setter: false,
     },
     {
+      name: 'destroyOnClose',
+      propType: 'bool',
+      title: '关闭销毁内容',
+      setter: 'BoolSetter',
+    },
+    {
+      name: 'closeOnClickModal',
+      propType: 'bool',
+      title: '点击遮罩关闭',
+      setter: 'BoolSetter',
+      default: true,
+    },
+    {
       name: 'center',
       propType: 'bool',
       title: '内容居中',
       setter: 'BoolSetter',
     },
     {
+      name: 'top',
+      propType: 'string',
+      title: '距离顶部',
+      setter: 'StringSetter',
+    },
+    {
       name: 'customClass',
       propType: 'string',
-      title: 'customClass',
+      title: {
+        label: '自定义类名',
+        tip: 'Dialog 的class类名，用于修改样式',
+      },
       setter: 'StringSetter',
     },
     // {
@@ -53,36 +81,19 @@ export default {
       title: '显示关闭按钮',
       setter: 'BoolSetter',
     },
-    {
-      name: 'title',
-      propType: 'string',
-      title: '标题',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'appendToBody',
-      propType: 'bool',
-      title: 'appendToBody',
-      setter: 'BoolSetter',
-    },
+
+    // {
+    //   name: 'appendToBody',
+    //   propType: 'bool',
+    //   title: 'appendToBody',
+    //   setter: 'BoolSetter',
+    // },
     {
       name: 'beforeClose',
       propType: 'func',
-      title: 'beforeClose',
-      setter: false,
+      title: '关闭前的回调',
     },
-    {
-      name: 'destroyOnClose',
-      propType: 'bool',
-      title: '关闭销毁内容',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'closeOnClickModal',
-      propType: 'bool',
-      title: '点击遮罩关闭',
-      setter: 'BoolSetter',
-    },
+
     {
       name: 'closeOnPressEscape',
       propType: 'bool',
@@ -98,39 +109,20 @@ export default {
     {
       name: 'modal',
       propType: 'bool',
-      title: '是否遮罩',
+      title: '显示遮罩',
       setter: 'BoolSetter',
+      default: true,
     },
-    {
-      name: 'openDelay',
-      propType: 'number',
-      title: 'openDelay',
-      setter: false,
-    },
-    {
-      name: 'closeDelay',
-      propType: 'number',
-      title: 'closeDelay',
-      setter: false,
-    },
-    {
-      name: 'top',
-      propType: 'string',
-      title: '距离顶部',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'modalClass',
-      propType: 'string',
-      title: 'modalClass',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'zIndex',
-      propType: 'number',
-      title: 'zIndex',
-      setter: false,
-    },
+    // {
+    //   name: 'openDelay',
+    //   propType: 'number',
+    //   title: 'openDelay',
+    // },
+    // {
+    //   name: 'closeDelay',
+    //   propType: 'number',
+    //   title: 'closeDelay',
+    // },
     {
       name: 'footer',
       title: { label: '底部操作', tip: 'Dialog 按钮操作区的内容' },
@@ -146,9 +138,8 @@ export default {
         'onOpened',
         'onClose',
         'onClosed',
-        'onUpdate:modelvalue',
-        'onOpenautofocus',
-        'onCloseautofocus',
+        'onOpenAutoFocus',
+        'onCloseAutoFocus',
       ],
     },
     component: {

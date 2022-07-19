@@ -51,16 +51,20 @@ export default {
       ],
     },
     {
-      name: 'label',
+      name: 'trueLabel',
       propType: {
         type: 'oneOfType',
-        value: ['string', 'bool', 'number'],
+        value: ['string', 'number', 'bool'],
       },
-      title: {
-        label: '选中状态的值',
-        tip: '只有在checkbox-group或者绑定对象类型为array时有效',
+      title: '选中时的值',
+    },
+    {
+      name: 'falseLabel',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'number', 'bool'],
       },
-      setter: false,
+      title: '未选中时的值',
     },
     // {
     //   name: 'indeterminate',
@@ -74,28 +78,22 @@ export default {
       title: '是否禁用',
       setter: 'BoolSetter',
     },
+    // {
+    //   name: 'checked',
+    //   propType: 'bool',
+    //   title: '当前勾选',
+    //   setter: 'BoolSetter',
+    // },
     {
-      name: 'checked',
-      propType: 'bool',
-      title: 'checked',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'trueLabel',
+      name: 'label',
       propType: {
         type: 'oneOfType',
-        value: ['string', 'number'],
+        value: ['string', 'bool', 'number'],
       },
-      title: '选中时的值',
-      setter: false,
-    },
-    {
-      name: 'falseLabel',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
+      title: {
+        label: '选中状态的值',
+        tip: '只有在checkbox-group或者绑定对象类型为array时有效',
       },
-      title: '未选中时的值',
       setter: false,
     },
     {

@@ -72,6 +72,127 @@
   "condition": true,
   "conditionGroup": "",
   "children": [{
+      "componentName": "ElForm",
+      "id": "node_ocl565trim3",
+      "props": {
+        "labelWidth": 80,
+        "model": {
+          "type": "JSExpression",
+          "value": "this.user"
+        }
+      },
+      "hidden": false,
+      "title": "",
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [{
+          "componentName": "ElFormItem",
+          "id": "node_ocl565trim4",
+          "props": {
+            "label": "用户名"
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [{
+            "componentName": "ElInput",
+            "id": "node_ocl565trim5",
+            "props": {
+              "placeholder": "请输入用户名",
+              "v-model": {
+                "type": "JSExpression",
+                "value": "this.user.username",
+                "mock": {
+                  "type": "JSExpression",
+                  "value": "this.user.username"
+                }
+              }
+            },
+            "hidden": false,
+            "title": "",
+            "isLocked": false,
+            "condition": true,
+            "conditionGroup": ""
+          }]
+        },
+        {
+          "componentName": "ElFormItem",
+          "id": "node_ocl565trim6",
+          "props": {
+            "label": "密码"
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [{
+            "componentName": "ElInput",
+            "id": "node_ocl565trim7",
+            "props": {
+              "type": "password",
+              "placeholder": "请输入密码",
+              "v-model": {
+                "type": "JSExpression",
+                "value": "this.user.password",
+                "mock": {
+                  "type": "JSExpression",
+                  "value": "this.user.password"
+                }
+              }
+            },
+            "hidden": false,
+            "title": "",
+            "isLocked": false,
+            "condition": true,
+            "conditionGroup": ""
+          }]
+        },
+        {
+          "componentName": "ElFormItem",
+          "id": "node_ocl565trim8",
+          "props": {
+            "label": ""
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [{
+            "componentName": "ElButton",
+            "id": "node_ocl565ts8y3",
+            "props": {
+              "children": "搜索",
+              "__events": {
+                "eventDataList": [{
+                  "type": "componentEvent",
+                  "name": "onClick",
+                  "relatedEventName": "onClick"
+                }],
+                "eventList": [{
+                  "name": "onClick",
+                  "disabled": true
+                }]
+              },
+              "onClick": {
+                "type": "JSFunction",
+                "value": "function(){this.onClick.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+              }
+            },
+            "hidden": false,
+            "title": "",
+            "isLocked": false,
+            "condition": true,
+            "conditionGroup": ""
+          }]
+        }
+      ]
+    },
+    {
       "componentName": "ElButton",
       "id": "node_ocl564ogif4",
       "props": {
@@ -179,10 +300,7 @@
         "data": {
           "type": "JSExpression",
           "value": "this.tableData"
-        },
-        "loading": false,
-        "minHeight": "",
-        "maxHeight": ""
+        }
       },
       "hidden": false,
       "title": "",
@@ -191,37 +309,13 @@
       "conditionGroup": ""
     },
     {
-      "componentName": "ElCascader",
-      "id": "node_ocl5hgx25t5",
+      "componentName": "ElInput",
+      "id": "node_ocl565tt4k3",
       "props": {
-        "options": [{
-            "value": "zhejiang",
-            "label": "Zhejiang",
-            "children": [{
-              "value": "hangzhou",
-              "label": "Hangzhou",
-              "children": [{
-                "value": "xihu",
-                "label": "West Lake"
-              }]
-            }]
-          },
-          {
-            "value": "jiangsu",
-            "label": "Jiangsu",
-            "children": [{
-              "value": "nanjing",
-              "label": "Nanjing",
-              "children": [{
-                "value": "zhonghuamen",
-                "label": "Zhong Hua Men"
-              }]
-            }]
-          }
-        ],
-        "placeholder": "请选择",
-        "separator": "/",
-        "tagType": "info"
+        "v-model": {
+          "type": "JSExpression",
+          "value": "this.inputValue"
+        }
       },
       "hidden": false,
       "title": "",

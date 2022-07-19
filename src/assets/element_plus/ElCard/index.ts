@@ -21,7 +21,29 @@ export default {
       name: 'shadow',
       propType: 'string',
       title: '阴影时机',
-      setter: 'StringSetter',
+      defaultValue: 'always',
+      setter: [
+        {
+          componentName: 'RadioGroupSetter',
+          props: {
+            options: [
+              {
+                title: '总是',
+                value: 'always',
+              },
+              {
+                title: '悬浮',
+                value: 'hover',
+              },
+              {
+                title: '从不',
+                value: 'never',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
     },
   ],
   configure: {

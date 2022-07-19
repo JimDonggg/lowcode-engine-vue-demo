@@ -80,7 +80,7 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['onUpdate:modelvalue', 'onChange'],
+      events: ['onChange'],
     },
     component: {
       isContainer: true,

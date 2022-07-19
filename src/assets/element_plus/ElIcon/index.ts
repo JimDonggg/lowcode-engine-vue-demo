@@ -1,3 +1,4 @@
+import iconSetter from '@/assets/element_plus/setter/iconSetter';
 export default {
   category: '基础',
   componentName: 'ElIcon',
@@ -9,40 +10,22 @@ export default {
   },
   props: [
     {
+      name: 'children',
+      description: '图标',
+      propType: 'string',
+      setter: iconSetter,
+    },
+    {
       name: 'size',
-      propType: {
-        type: 'oneOfType',
-        value: ['number', 'string'],
-      },
+      propType: 'number',
       title: '尺寸',
-      setter: [
-        {
-          componentName: 'RadioGroupSetter',
-          props: {
-            options: [
-              {
-                title: '大',
-                value: 'large',
-              },
-              {
-                title: '默认',
-                value: 'default',
-              },
-              {
-                title: '小',
-                value: 'small',
-              },
-            ],
-          },
-        },
-        'VariableSetter',
-      ],
     },
     {
       name: 'color',
       propType: 'string',
-      title: 'color',
-      setter: 'StringSetter',
+      title: '颜色',
+      setter: 'ColorSetter',
+      defaultValue: '#000000',
     },
   ],
   configure: {
@@ -52,7 +35,7 @@ export default {
       events: [],
     },
     component: {
-      isContainer: false,
+      isContainer: true,
       isModal: false,
     },
   },

@@ -14,6 +14,7 @@ export default {
       title: 'v-model',
       setter: 'ExpressionSetter',
     },
+
     // {
     //   name: 'popperClass',
     //   propType: 'string',
@@ -62,6 +63,10 @@ export default {
                 value: 'datetime',
               },
               {
+                title: '月范围',
+                value: 'monthrange',
+              },
+              {
                 title: '日期范围',
                 value: 'daterange',
               },
@@ -74,6 +79,36 @@ export default {
         },
         'VariableSetter',
       ],
+    },
+    {
+      name: 'placeholder',
+      propType: 'string',
+      title: '输入提示',
+      setter: 'StringSetter',
+      condition: {
+        type: 'JSFunction',
+        value: 'target => !target.getProps().getPropValue("type").includes("range")',
+      },
+    },
+    {
+      name: 'startPlaceholder',
+      propType: 'string',
+      title: '开始输入提示',
+      setter: 'StringSetter',
+      condition: {
+        type: 'JSFunction',
+        value: 'target => target.getProps().getPropValue("type").includes("range")',
+      },
+    },
+    {
+      name: 'endPlaceholder',
+      propType: 'string',
+      title: '结束输入提示',
+      setter: 'StringSetter',
+      condition: {
+        type: 'JSFunction',
+        value: 'target => target.getProps().getPropValue("type").includes("range")',
+      },
     },
     {
       name: 'clearable',
@@ -96,15 +131,14 @@ export default {
     //   title: '标签可增加关闭',
     //   setter: 'BoolSetter',
     // },
-    {
-      name: 'prefixIcon',
-      propType: {
-        type: 'oneOfType',
-        value: ['string'],
-      },
-      title: 'prefixIcon',
-      setter: false,
-    },
+    // {
+    //   name: 'prefixIcon',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string'],
+    //   },
+    //   title: 'prefixIcon',
+    // },
     {
       name: 'size',
       propType: 'string',
@@ -145,127 +179,63 @@ export default {
       setter: 'BoolSetter',
     },
     {
-      name: 'placeholder',
-      propType: 'string',
-      title: '输入提示',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'popperOptions',
-      propType: 'object',
-      title: 'popperOptions',
-      setter: false,
-    },
-    {
       name: 'rangeSeparator',
       propType: 'string',
-      title: 'rangeSeparator',
+      title: '分隔符',
+      defaultValue: '-',
       setter: 'StringSetter',
     },
-    {
-      name: 'startPlaceholder',
-      propType: 'string',
-      title: 'startPlaceholder',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'endPlaceholder',
-      propType: 'string',
-      title: 'endPlaceholder',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'defaultValue',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'array'],
-      },
-      title: 'defaultValue',
-      setter: false,
-    },
-    {
-      name: 'defaultTime',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'array'],
-      },
-      title: 'defaultTime',
-      setter: false,
-    },
-    {
-      name: 'isRange',
-      propType: 'bool',
-      title: 'isRange',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'disabledHours',
-      propType: 'func',
-      title: 'disabledHours',
-      setter: false,
-    },
-    {
-      name: 'disabledMinutes',
-      propType: 'func',
-      title: 'disabledMinutes',
-      setter: false,
-    },
-    {
-      name: 'disabledSeconds',
-      propType: 'func',
-      title: 'disabledSeconds',
-      setter: false,
-    },
-    {
-      name: 'disabledDate',
-      propType: 'func',
-      title: 'disabledDate',
-      setter: false,
-    },
-    {
-      name: 'cellClassName',
-      propType: 'func',
-      title: 'cellClassName',
-      setter: false,
-    },
-    {
-      name: 'shortcuts',
-      propType: 'array',
-      title: 'shortcuts',
-      setter: false,
-    },
-    {
-      name: 'arrowControl',
-      propType: 'bool',
-      title: 'arrowControl',
-      setter: 'BoolSetter',
-    },
-    {
-      name: 'label',
-      propType: 'string',
-      title: '标签',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'tabindex',
-      propType: {
-        type: 'oneOfType',
-        value: ['string', 'number'],
-      },
-      title: 'tabindex',
-      setter: false,
-    },
-    {
-      name: 'validateEvent',
-      propType: 'bool',
-      title: 'validateEvent',
-      setter: 'BoolSetter',
-    },
+    // {
+    //   name: 'startPlaceholder',
+    //   propType: 'string',
+    //   title: 'startPlaceholder',
+    //   setter: 'StringSetter',
+    // },
+    // {
+    //   name: 'endPlaceholder',
+    //   propType: 'string',
+    //   title: 'endPlaceholder',
+    //   setter: 'StringSetter',
+    // },
+    // {
+    //   name: 'defaultValue',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'array'],
+    //   },
+    //   title: 'defaultValue',
+    // },
+    // {
+    //   name: 'defaultTime',
+    //   propType: {
+    //     type: 'oneOfType',
+    //     value: ['string', 'array'],
+    //   },
+    //   title: 'defaultTime',
+    //   setter: false,
+    // },
+    // {
+    //   name: 'cellClassName',
+    //   propType: 'func',
+    //   title: '自定义类名',
+    // },
+    // {
+    //   name: 'shortcuts',
+    //   propType: 'array',
+    //   title: '快捷选项',
+    // },
     {
       name: 'unlinkPanels',
       propType: 'bool',
-      title: 'unlinkPanels',
+      title: {
+        label: '面板联动',
+        tip: '只能在范围选择器中使用',
+      },
       setter: 'BoolSetter',
+      condition: {
+        type: 'JSFunction',
+        value: 'target => target.getProps().getPropValue("type").includes("range")',
+      },
     },
   ],
   configure: {

@@ -8,9 +8,9 @@ import CodeEditor from '@alilc/lowcode-plugin-code-editor';
 import RegistryPlugin from './plugins/registry';
 import InitPlugin from './plugins/init';
 import SetterPlugin from './plugins/setter';
+import { registerRefProp } from './plugins/set-ref-prop';
 import Actions from './plugins/actions';
 import './editor.less';
-
 (async () => {
   const preference = new Map();
 
@@ -32,7 +32,7 @@ import './editor.less';
   await plugins.register(InitPlugin);
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
-
+  await plugins.register(registerRefProp);
   await init(
     document.getElementById('lce-container')!,
     {
@@ -45,6 +45,12 @@ import './editor.less';
         'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
         '/js/simulator.js',
       ],
+      // 目前appHelper未支持
+      // appHelper: {
+      //   utils: {
+      //     ...tools,
+      //   },
+      // },
     } as EngineOptions,
     preference
   );

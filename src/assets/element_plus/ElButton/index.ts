@@ -1,3 +1,4 @@
+import iconSelectSetter from '../setter/iconSelectSetter';
 export default {
   category: '基础',
   componentName: 'ElButton',
@@ -45,15 +46,10 @@ export default {
       ],
     },
     {
-      name: 'disabled',
-      propType: 'bool',
-      title: '是否禁用',
-      setter: 'BoolSetter',
-    },
-    {
       name: 'type',
       propType: 'string',
       title: '类型',
+      defaultValue: '',
       setter: [
         {
           componentName: 'SelectSetter',
@@ -89,19 +85,22 @@ export default {
         'VariableSetter',
       ],
     },
+    {
+      name: 'disabled',
+      propType: 'bool',
+      title: '是否禁用',
+      setter: 'BoolSetter',
+    },
     // {
     //   name: 'icon',
-    //   propType: {
-    //     type: 'oneOfType',
-    //     value: ['string', 'func'],
-    //   },
+    //   propType: 'string',
     //   title: '图标组件',
-    //   setter: false,
+    //   setter: iconSelectSetter,
     // },
     {
       name: 'loading',
       propType: 'bool',
-      title: '显示加载状态',
+      title: '加载状态',
       setter: 'BoolSetter',
     },
     // {

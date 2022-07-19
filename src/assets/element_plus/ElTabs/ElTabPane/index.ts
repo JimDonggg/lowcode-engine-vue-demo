@@ -10,9 +10,11 @@ export default {
   props: [
     {
       name: 'label',
-      propType: 'string',
-      title: '标签',
-      setter: 'StringSetter',
+      propType: {
+        type: 'oneOfType',
+        value: ['string', 'node'],
+      },
+      title: '选项卡标题',
     },
     {
       name: 'name',
@@ -20,8 +22,10 @@ export default {
         type: 'oneOfType',
         value: ['string', 'number'],
       },
-      title: 'name',
-      setter: false,
+      title: {
+        label: '激活标识符',
+        tip: 'name｜与选项卡绑定值 value 对应的标识符',
+      },
     },
     {
       name: 'closable',

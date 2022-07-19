@@ -9,35 +9,10 @@ export default {
   },
   props: [
     {
-      name: 'type',
+      name: 'v-model',
       propType: 'string',
-      title: '类型',
-      setter: [
-        {
-          componentName: 'SelectSetter',
-          props: {
-            options: [
-              {
-                title: '主要',
-                value: 'primary',
-              },
-              {
-                title: '成功',
-                value: 'success',
-              },
-              {
-                title: '警告',
-                value: 'warning',
-              },
-              {
-                title: '危险',
-                value: 'danger',
-              },
-            ],
-          },
-        },
-        'VariableSetter',
-      ],
+      title: 'v-model',
+      setter: 'ExpressionSetter',
     },
     {
       name: 'activeName',
@@ -45,9 +20,41 @@ export default {
         type: 'oneOfType',
         value: ['string', 'number'],
       },
-      title: 'activeName',
+      title: {
+        label: '激活Tab',
+        tip: '当前激活Tab ｜ activeName',
+      },
       setter: false,
     },
+    {
+      name: 'type',
+      propType: 'string',
+      title: '类型',
+      defaultValue: '',
+      setter: [
+        {
+          componentName: 'SelectSetter',
+          props: {
+            options: [
+              {
+                title: '默认',
+                value: '',
+              },
+              {
+                title: '卡片',
+                value: 'card',
+              },
+              {
+                title: '带边框带卡片',
+                value: 'border-card',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
+    },
+
     {
       name: 'closable',
       propType: 'bool',
@@ -61,28 +68,41 @@ export default {
       setter: 'BoolSetter',
     },
     {
-      name: 'v-model',
-      propType: 'string',
-      title: 'v-model',
-      setter: 'ExpressionSetter',
-    },
-    {
       name: 'editable',
       propType: 'bool',
-      title: '标签可增加关闭',
+      title: '标签可增加、关闭',
       setter: 'BoolSetter',
     },
     {
       name: 'tabPosition',
       propType: 'string',
       title: '选项卡位置',
-      setter: 'StringSetter',
-    },
-    {
-      name: 'beforeLeave',
-      propType: 'func',
-      title: 'beforeLeave',
-      setter: false,
+      setter: [
+        {
+          componentName: 'SelectSetter',
+          props: {
+            options: [
+              {
+                title: '上',
+                value: 'top',
+              },
+              {
+                title: '左',
+                value: 'left',
+              },
+              {
+                title: '下',
+                value: 'bottom',
+              },
+              {
+                title: '右',
+                value: 'right',
+              },
+            ],
+          },
+        },
+        'VariableSetter',
+      ],
     },
     {
       name: 'stretch',
@@ -90,19 +110,18 @@ export default {
       title: '宽度自撑开',
       setter: 'BoolSetter',
     },
+    {
+      name: 'beforeLeave',
+      propType: 'func',
+      title: 'beforeLeave',
+      setter: 'FunctionSetter',
+    },
   ],
   configure: {
     supports: {
       style: true,
       loop: true,
-      events: [
-        'onUpdate:modelvalue',
-        'onTab-click',
-        'onTab-change',
-        'onEdit',
-        'onTab-remove',
-        'onTab-add',
-      ],
+      events: ['onTabClick', 'onTabChange', 'onEdit', 'onTabRemove', 'onTabAdd'],
     },
     component: {
       isContainer: true,

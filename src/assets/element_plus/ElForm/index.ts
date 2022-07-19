@@ -78,10 +78,9 @@ export default {
       name: 'labelWidth',
       propType: {
         type: 'oneOfType',
-        value: ['string', 'number'],
+        value: ['number', 'string'],
       },
       title: '标签宽度',
-      setter: 'StringSetter',
     },
     // {
     //   name: 'labelSuffix',

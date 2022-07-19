@@ -1,6 +1,6 @@
 import { Button, Message } from '@alifd/next';
 import { saveSchema } from '@/utils/store';
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { ILowCodePluginContext, config } from '@alilc/lowcode-engine';
 
 const save = async () => {
   await saveSchema();
@@ -10,6 +10,10 @@ const save = async () => {
 const preview = async () => {
   await saveSchema();
   window.open('preview.html');
+  // setTimeout(() => {
+  //   const defaultCurrentPage: string = config.get('currentPage') || 'home';
+  //   window.open(`./preview.html?page=${defaultCurrentPage}`);
+  // }, 500);
 };
 
 const savePlugin = (ctx: ILowCodePluginContext) => {

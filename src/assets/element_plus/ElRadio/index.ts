@@ -15,11 +15,12 @@ export default {
       setter: 'ExpressionSetter',
     },
     {
-      name: '标签内容',
+      name: 'children',
       propType: {
         type: 'oneOfType',
         value: ['node', 'string'],
       },
+      title: '标签内容',
       setter: ['SlotSetter', 'StringSetter', 'VariableSetter'],
     },
     {
@@ -62,7 +63,6 @@ export default {
         value: ['string', 'number', 'bool'],
       },
       title: '选中的值',
-      setter: false,
     },
     {
       name: 'border',
@@ -75,7 +75,7 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['onUpdate:modelvalue', 'onChange'],
+      events: ['onChange'],
     },
     component: {
       isContainer: false,

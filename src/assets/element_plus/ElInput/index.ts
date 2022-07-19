@@ -69,7 +69,7 @@ export default {
           props: {
             options: [
               {
-                title: '文本框',
+                title: '文本',
                 value: 'text',
               },
               {
@@ -79,6 +79,10 @@ export default {
               {
                 title: '文本框',
                 value: 'textarea',
+              },
+              {
+                title: '数字',
+                value: 'number',
               },
             ],
           },
@@ -140,16 +144,16 @@ export default {
     //   title: 'prefixIcon',
     //   setter: false,
     // },
-    {
-      name: 'append',
-      title: { label: '前置标签', tip: '前置标签' },
-      propType: { type: 'oneOfType', value: ['node'] },
-    },
-    {
-      name: 'prepend',
-      title: { label: '后置标签', tip: '后置标签' },
-      propType: { type: 'oneOfType', value: ['node'] },
-    },
+    // {
+    //   name: 'append',
+    //   title: { label: '前置标签', tip: '前置标签' },
+    //   propType: { type: 'oneOfType', value: ['node'] },
+    // },
+    // {
+    //   name: 'prepend',
+    //   title: { label: '后置标签', tip: '后置标签' },
+    //   propType: { type: 'oneOfType', value: ['node'] },
+    // },
     // {
     //   name: 'prefix',
     //   title: { label: '前缀', tip: '前缀' },

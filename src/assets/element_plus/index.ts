@@ -25,16 +25,33 @@ import ElDialog from './ElDialog';
 import ElRow from './ElRow';
 import ElCol from './ElRow/ElCol';
 import ElCascader from './ElCascader';
+import ElTag from './ElTag';
+import ElUpload from './ElUpload';
+import NH2 from '../naive_ui/Typography/NH2';
+import NH3 from '../naive_ui/Typography/NH3';
+import NText from '../naive_ui/Typography/NText';
+import icons from './ElIcon/icons';
+import ElInputNumber from './ElInputNumber';
+import ElLink from './ElLink';
+import ElSwitch from './ElSwitch';
+import ElImage from './ElImage';
+import ElTooltip from './ElTooltip';
+import ElDrawer from './ElDrawer';
+// import ElImageViewer from './ElImage/ElImageViewer';
 // import ElSpace from './ElSpace';
 export default main();
 function main() {
   const components = [
+    NText,
+    NH2,
+    NH3,
     ElButton,
     ElButtonGroup,
     NDataTable,
     ElCard,
     ElDatePicker,
     ElInput,
+    ElInputNumber,
     ElCheckbox,
     ElCheckboxGroup,
     ElRadio,
@@ -50,6 +67,15 @@ function main() {
     ElRow,
     ElCol,
     ElCascader,
+    ElSwitch,
+    ElTag,
+    ElUpload,
+    ElLink,
+    ElTooltip,
+    ElImage,
+    // ElImageViewer,
+    ElDrawer,
+    ...icons,
     // ElSpace,
   ];
   const componentList = generateComponentList(components);
@@ -74,6 +100,12 @@ function main() {
         urls: ['https://unpkg.com/naive-ui@2.30.6/dist/index.prod.js'],
         library: 'naive',
       },
+      {
+        package: '@element-plus/icons-vue',
+        version: '2.2.6',
+        urls: ['//unpkg.com/@element-plus/icons-vue'],
+        library: 'ElementPlusIconsVue',
+      },
     ],
     components,
     componentList,
@@ -89,7 +121,11 @@ function generateComponentList(
     const componentCategory: ComponentCategory = {
       title: CategoryEnum[category],
       children: components
-        .filter((com) => com.category === CategoryEnum[category])
+        .filter((com) => {
+          return (
+            com.category === CategoryEnum[category] && componentMetas[com.componentName]
+          );
+        })
         .map((component) => {
           return {
             componentName: component.componentName,

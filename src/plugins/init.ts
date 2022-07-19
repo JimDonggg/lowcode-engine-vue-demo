@@ -2,7 +2,9 @@ import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 // import assets from '../assets/element_plus_assets.json';
 import assets from '../assets/element_plus';
+// import originSchema from './pages/blank.json';
 import originSchema from '../assets/schema.json';
+
 import { getProjectSchemaToLocalStorage } from '@/utils/store';
 const editorInit = (ctx: ILowCodePluginContext) => {
   return {
