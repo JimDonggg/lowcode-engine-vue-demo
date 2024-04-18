@@ -1,7 +1,9 @@
 import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import { getProjectSchemaToLocalStorage } from '@/utils/store';
 import { IPublicModelPluginContext } from '@alilc/lowcode-types';
-import assets from '@/assets/assets.json';
+// import assets from '@/assets/assets.json';
+import assets from '../assets';
+
 import originSchema from '@/assets/schema.json';
 
 const editorInit = (ctx: IPublicModelPluginContext) => {

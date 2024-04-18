@@ -10,7 +10,6 @@
     "jsx": "preserve",
     "noImplicitThis": true,
     "strict": true,
-    "preserveValueImports": true,
     "target": "ESNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

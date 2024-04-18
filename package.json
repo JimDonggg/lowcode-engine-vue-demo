@@ -14,6 +14,7 @@
     "@knxcloud/lowcode-utils": "^1.6.0-beta.6",
     "@knxcloud/lowcode-vue-renderer": "^1.6.0-beta.9",
     "@knxcloud/lowcode-vue-simulator-renderer": "^1.6.0-beta.9",
+    "element-plus": "^2.6.3",
     "module": "^1.2.5"
   },
   "devDependencies": {
